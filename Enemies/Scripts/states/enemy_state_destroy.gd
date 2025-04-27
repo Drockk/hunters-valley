@@ -46,6 +46,7 @@ func _on_enemy_destroyed(hurt_box: HurtBox) -> void:
 	state_machine.change_state(self)
 
 func _on_animation_finished(_a: String) -> void:
+	enemy.is_destroyed.set_value()
 	enemy.queue_free()
 	pass
 

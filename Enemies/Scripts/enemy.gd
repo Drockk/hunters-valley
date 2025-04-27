@@ -17,12 +17,23 @@ var invulnerable: bool = false
 @onready var sprite = $Sprite2D
 @onready var hit_box = $HitBox
 @onready var state_machine: EnemyStateMachine = $EnemyStateMachine
+@onready var is_destroyed: PersistentDataHandler = $PersistentDataHandler
 
 func _ready():
+	is_destroyed.data_loaded.connect(_is_destroyed)
+	
 	state_machine.initialize(self)
 	player = PlayerManager.player
 	hit_box.damaged.connect(_take_damage)
+	_is_destroyed()
 	pass
+
+
+func _is_destroyed():
+	if is_destroyed.value == true:
+		queue_free()
+	pass
+
 
 func _physics_process(_delta):
 	move_and_slide()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://6e8ncua8gbtf"]
+[gd_scene load_steps=7 format=3 uid="uid://6e8ncua8gbtf"]
 
 [ext_resource type="Script" uid="uid://3fhuo7fpren" path="res://Props/Plants/plant.gd" id="1_djs60"]
 [ext_resource type="Texture2D" uid="uid://c52j5c63dp308" path="res://Props/Sprites/Props.png" id="1_qsug5"]
 [ext_resource type="PackedScene" uid="uid://d0mwyry3hodqj" path="res://GeneralNodes/HitBox/hit_box.tscn" id="2_djs60"]
+[ext_resource type="PackedScene" uid="uid://cj07ag040ntch" path="res://GeneralNodes/PersistentDataHandler/persistent-data-handler.tscn" id="4_0y2q1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djs60"]
 size = Vector2(30, 32)
@@ -11,6 +12,7 @@ size = Vector2(30, 32)
 size = Vector2(24, 16)
 
 [node name="Plant" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_djs60")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -35,3 +37,5 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_qsug5")
+
+[node name="PersistentDataIsDestroyed" parent="." instance=ExtResource("4_0y2q1")]
