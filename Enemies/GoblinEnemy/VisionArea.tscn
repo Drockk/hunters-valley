@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://r3afgj5ixe47"]
+
+[ext_resource type="Script" uid="uid://duwbdcdxx603" path="res://Enemies/GoblinEnemy/vision_area.gd" id="1_bupva"]
+
+[node name="VisionArea" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_bupva")

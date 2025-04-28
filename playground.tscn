@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_o00ia"]
 [ext_resource type="PackedScene" uid="uid://mf1dfrwkw75m" path="res://Tile Maps/Grass-01.tscn" id="2_wt17y"]
 [ext_resource type="PackedScene" uid="uid://6e8ncua8gbtf" path="res://Props/Plants/plant.tscn" id="3_m8u5f"]
-[ext_resource type="PackedScene" uid="uid://c8u38rp8xuk3p" path="res://Enemies/SlimeEnemy/Slime.tscn" id="4_is3ju"]
+[ext_resource type="PackedScene" uid="uid://c8u38rp8xuk3p" path="res://Enemies/GoblinEnemy/Goblin.tscn" id="4_is3ju"]
 [ext_resource type="PackedScene" uid="uid://bh8lnlytq7ure" path="res://Levels/player_spawn.tscn" id="4_o00ia"]
 
 [node name="Playground" type="Node2D"]

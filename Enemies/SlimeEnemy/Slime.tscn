@@ -1,21 +1,21 @@
-[gd_scene load_steps=37 format=3 uid="uid://c8u38rp8xuk3p"]
+[gd_scene load_steps=37 format=3 uid="uid://crt3jilowfmit"]
 
-[ext_resource type="Script" uid="uid://dh6lbf6554gw1" path="res://Enemies/Scripts/enemy.gd" id="1_2shxi"]
-[ext_resource type="Texture2D" uid="uid://b0155fgbowofi" path="res://Player/Sprites/Shadow.png" id="1_88h0e"]
-[ext_resource type="Texture2D" uid="uid://de3g057qr04ep" path="res://Enemies/SlimeEnemy/Slime.png" id="2_2shxi"]
-[ext_resource type="PackedScene" uid="uid://d0mwyry3hodqj" path="res://GeneralNodes/HitBox/hit_box.tscn" id="3_53f3j"]
-[ext_resource type="Script" uid="uid://dlfmsb6o31i3l" path="res://Enemies/Scripts/enemy_state_machine.gd" id="4_1dl88"]
-[ext_resource type="AudioStream" uid="uid://bprarcmw62bca" path="res://Enemies/SlimeEnemy/hit_01.wav" id="4_28qdt"]
-[ext_resource type="Script" uid="uid://cone7l27yabyc" path="res://Enemies/Scripts/states/enemy_state_idle.gd" id="5_6mn6o"]
-[ext_resource type="AudioStream" uid="uid://dovcf66p07rfg" path="res://Enemies/SlimeEnemy/hit_00.wav" id="5_s2lxw"]
-[ext_resource type="Script" uid="uid://dx4lksnkiyho8" path="res://Enemies/Scripts/states/enemy_state_wander.gd" id="6_jbwrg"]
-[ext_resource type="PackedScene" uid="uid://de0rb1dhuh742" path="res://GeneralNodes/HurtBox/HurtBox.tscn" id="7_jxqj8"]
-[ext_resource type="Script" uid="uid://d1cb0pw3jkofp" path="res://Enemies/Scripts/states/enemy_state_stun.gd" id="9_n841a"]
-[ext_resource type="Texture2D" uid="uid://dwwiotn0m4efe" path="res://Enemies/SlimeEnemy/DestroySmoke.png" id="10_s2lxw"]
-[ext_resource type="Script" uid="uid://dnypqrgjdkdsd" path="res://Enemies/Scripts/states/enemy_state_destroy.gd" id="12_svknd"]
-[ext_resource type="Script" uid="uid://cofkpbwtaclyk" path="res://Enemies/Scripts/drop_data.gd" id="13_g4voq"]
-[ext_resource type="Resource" uid="uid://dxgs2xelhkhpu" path="res://Items/apple.tres" id="14_1tyi5"]
-[ext_resource type="PackedScene" uid="uid://cj07ag040ntch" path="res://GeneralNodes/PersistentDataHandler/persistent-data-handler.tscn" id="16_1tyi5"]
+[ext_resource type="Script" uid="uid://dh6lbf6554gw1" path="res://Enemies/Scripts/enemy.gd" id="1_552yf"]
+[ext_resource type="PackedScene" uid="uid://de0rb1dhuh742" path="res://GeneralNodes/HurtBox/HurtBox.tscn" id="2_acuon"]
+[ext_resource type="PackedScene" uid="uid://d0mwyry3hodqj" path="res://GeneralNodes/HitBox/hit_box.tscn" id="3_tkrh0"]
+[ext_resource type="Texture2D" uid="uid://b0155fgbowofi" path="res://Player/Sprites/Shadow.png" id="4_fruje"]
+[ext_resource type="Texture2D" uid="uid://de3g057qr04ep" path="res://Enemies/SlimeEnemy/Slime.png" id="5_0ojvx"]
+[ext_resource type="AudioStream" uid="uid://bprarcmw62bca" path="res://Enemies/SlimeEnemy/hit_01.wav" id="6_v42tn"]
+[ext_resource type="AudioStream" uid="uid://dovcf66p07rfg" path="res://Enemies/SlimeEnemy/hit_00.wav" id="7_7co0x"]
+[ext_resource type="Script" uid="uid://dlfmsb6o31i3l" path="res://Enemies/Scripts/enemy_state_machine.gd" id="8_kihjc"]
+[ext_resource type="Script" uid="uid://cone7l27yabyc" path="res://Enemies/Scripts/states/enemy_state_idle.gd" id="9_sdfer"]
+[ext_resource type="Script" uid="uid://dx4lksnkiyho8" path="res://Enemies/Scripts/states/enemy_state_wander.gd" id="10_aoc0h"]
+[ext_resource type="Script" uid="uid://d1cb0pw3jkofp" path="res://Enemies/Scripts/states/enemy_state_stun.gd" id="11_rd2og"]
+[ext_resource type="Script" uid="uid://dnypqrgjdkdsd" path="res://Enemies/Scripts/states/enemy_state_destroy.gd" id="12_5v5uu"]
+[ext_resource type="Script" uid="uid://cofkpbwtaclyk" path="res://Enemies/Scripts/drop_data.gd" id="13_1w5ob"]
+[ext_resource type="Resource" uid="uid://dxgs2xelhkhpu" path="res://Items/apple.tres" id="14_qkcvv"]
+[ext_resource type="Texture2D" uid="uid://dwwiotn0m4efe" path="res://Enemies/SlimeEnemy/DestroySmoke.png" id="15_xyg5f"]
+[ext_resource type="PackedScene" uid="uid://cj07ag040ntch" path="res://GeneralNodes/PersistentDataHandler/persistent-data-handler.tscn" id="16_3ftp5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fero8"]
 radius = 14.0357
@@ -124,15 +124,15 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }],
 "times": PackedFloat32Array(0, 0.0001, 0.0002)
 }
@@ -147,7 +147,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }],
 "times": PackedFloat32Array(0.15)
 }
@@ -224,15 +224,15 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }],
 "times": PackedFloat32Array(0, 0.0001, 0.0002)
 }
@@ -247,7 +247,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }],
 "times": PackedFloat32Array(0.15)
 }
@@ -324,15 +324,15 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }],
 "times": PackedFloat32Array(0, 0.0001, 0.0002)
 }
@@ -347,7 +347,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }],
 "times": PackedFloat32Array(0.15)
 }
@@ -512,15 +512,15 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }],
 "times": PackedFloat32Array(0, 0.0001, 0.0002)
 }
@@ -576,15 +576,15 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }],
 "times": PackedFloat32Array(0, 0.0001, 0.0002)
 }
@@ -640,15 +640,15 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_s2lxw")
+"stream": ExtResource("7_7co0x")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_28qdt")
+"stream": ExtResource("6_v42tn")
 }],
 "times": PackedFloat32Array(0, 0.0001, 0.0002)
 }
@@ -759,8 +759,8 @@ _data = {
 }
 
 [sub_resource type="Resource" id="Resource_q5yv5"]
-script = ExtResource("13_g4voq")
-item = ExtResource("14_1tyi5")
+script = ExtResource("13_1w5ob")
+item = ExtResource("14_qkcvv")
 probality = 100.0
 min_amount = 1
 max_amount = 4
@@ -829,16 +829,16 @@ _data = {
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 256
 collision_mask = 272
-script = ExtResource("1_2shxi")
+script = ExtResource("1_552yf")
 
-[node name="HurtBox" parent="." instance=ExtResource("7_jxqj8")]
+[node name="HurtBox" parent="." instance=ExtResource("2_acuon")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_fero8")
 debug_color = Color(0.659795, 0.509894, 0.199389, 0.42)
 
-[node name="HitBox" parent="." instance=ExtResource("3_53f3j")]
+[node name="HitBox" parent="." instance=ExtResource("3_tkrh0")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -6)
@@ -847,11 +847,11 @@ debug_color = Color(0.659795, 0.509894, 0.199389, 0.42)
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.814666, 0.490047, 0, 1)
-texture = ExtResource("1_88h0e")
+texture = ExtResource("4_fruje")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -19)
-texture = ExtResource("2_2shxi")
+texture = ExtResource("5_0ojvx")
 hframes = 16
 vframes = 2
 
@@ -866,25 +866,25 @@ libraries = {
 autoplay = "idle_down"
 
 [node name="EnemyStateMachine" type="Node" parent="."]
-script = ExtResource("4_1dl88")
+script = ExtResource("8_kihjc")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("after_idle_state")]
-script = ExtResource("5_6mn6o")
+script = ExtResource("9_sdfer")
 after_idle_state = NodePath("../Wander")
 
 [node name="Wander" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
-script = ExtResource("6_jbwrg")
+script = ExtResource("10_aoc0h")
 wander_speed = 30.0
 state_animation_duration = 0.7
 next_state = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
-script = ExtResource("9_n841a")
+script = ExtResource("11_rd2og")
 next_state = NodePath("../Idle")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
-script = ExtResource("12_svknd")
-drops = Array[ExtResource("13_g4voq")]([SubResource("Resource_q5yv5")])
+script = ExtResource("12_5v5uu")
+drops = Array[ExtResource("13_1w5ob")]([SubResource("Resource_q5yv5")])
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 max_polyphony = 4
@@ -892,7 +892,7 @@ max_polyphony = 4
 [node name="DestroyEffectSprite" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(0, -9)
-texture = ExtResource("10_s2lxw")
+texture = ExtResource("15_xyg5f")
 hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DestroyEffectSprite"]
@@ -900,4 +900,4 @@ libraries = {
 &"": SubResource("AnimationLibrary_1tyi5")
 }
 
-[node name="PersistentDataHandler" parent="." instance=ExtResource("16_1tyi5")]
+[node name="PersistentDataHandler" parent="." instance=ExtResource("16_3ftp5")]
