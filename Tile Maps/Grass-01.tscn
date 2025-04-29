@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://mf1dfrwkw75m"]
+[gd_scene load_steps=7 format=3 uid="uid://mf1dfrwkw75m"]
 
 [ext_resource type="Texture2D" uid="uid://clmwm1d07ou46" path="res://Tile Maps/Sprites/Grass-01.png" id="1_815fc"]
+[ext_resource type="Texture2D" uid="uid://d0o1jc0yq81w2" path="res://Tile Maps/Sprites/dungeon_entrance.png" id="2_2w23f"]
 [ext_resource type="Script" uid="uid://bg11jsax84hxl" path="res://Tile Maps/LevelTileMap.gd" id="2_uskr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uskr2"]
@@ -461,6 +462,27 @@ texture_region_size = Vector2i(32, 32)
 14:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 13, -16, -16, 14, -16, 14, -9, 8, 9, 5, 11, 2, 10, -5, 10, -9, 14)
 15:7/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1urgu"]
+texture = ExtResource("2_2w23f")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -13, 15, -12, 13, -12, 13, -10, 12, -8, 10, -6, 8, -5, 8, -3, 7, -3, 7, 0, 6, 0, 6, 8, 5, 8, 5, 10, 4, 10, 4, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -12, 13, -12, 3, -3, 2, -3, 1, -5, 0, -6, -1, -5, -2, -3, -3, -3, -13, -13, -16, -13)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -5, 16, -5, 15, -4, 15, -4, 12, -6, 7, -7, 0, -8, -2, -10, -5, -12, -8, -14, -12, -16, -12)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 5, -16, 5, -12, 6, -11, 6, -8, 7, -8, 7, -1, 8, -1, 8, 5, 7, 5, 7, 7, 6, 7, 6, 10, 5, 10, 5, 14, 3, 14, 3, 13, 2, 13, 2, 12, -3, 12, -3, 13, -7, 13, -7, 14, -12, 14, -12, 13, -14, 13, -14, 12, -16, 12)
+1:2/0 = 0
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -16, 16, -16, 16, 14, -6, 14, -6, 13, -5, 13, -5, 6, -6, 6, -6, 0, -5, 0)
+
 [sub_resource type="TileSet" id="TileSet_2w23f"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 16
@@ -469,6 +491,7 @@ terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Path"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_uskr2")
+sources/1 = SubResource("TileSetAtlasSource_1urgu")
 
 [node name="Grass-01" type="TileMap"]
 z_index = -1

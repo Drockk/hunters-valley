@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbbe68lu26nd8"]
+
+[ext_resource type="PackedScene" uid="uid://hpp25gurbu3" path="res://Tile Maps/dungeon_01.tscn" id="1_1jxiy"]
+[ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_ux7ia"]
+[ext_resource type="PackedScene" uid="uid://bh8lnlytq7ure" path="res://Levels/player_spawn.tscn" id="2_2la2r"]
+[ext_resource type="PackedScene" uid="uid://djfnrqbq2s0me" path="res://Levels/level_transition.tscn" id="3_2la2r"]
+[ext_resource type="PackedScene" uid="uid://bbc7qnunibkb" path="res://Interactables/dungeon/pressure_plate.tscn" id="5_swvnj"]
+[ext_resource type="PackedScene" uid="uid://rqhyhhquaosv" path="res://Interactables/dungeon/barred_door.tscn" id="6_m3xjo"]
+[ext_resource type="PackedScene" uid="uid://ky8dkh72mi67" path="res://Interactables/dungeon/pushable_statue.tscn" id="7_4dhgi"]
+
+[node name="01" type="Node2D"]
+script = ExtResource("1_ux7ia")
+
+[node name="Dungeon01" parent="." instance=ExtResource("1_1jxiy")]
+rendering_quadrant_size = 32
+layer_0/tile_data = PackedInt32Array(-65536, 589824, 0, 0, 589824, 1, 65536, 589824, 2, 131072, 589824, 3, 196608, 589824, 4, 262144, 589824, 5, 327680, 589824, 1, 393216, 589824, 2, 458752, 589824, 3, 524288, 589824, 5, 589824, 589824, 6, -65521, 983040, 0, 589839, 983040, 6, 15, 983040, 1, 65551, 983040, 2, 131087, 983040, 3, 196623, 983040, 4, 262159, 983040, 1, 327695, 983040, 2, 393231, 983040, 3, 458767, 983040, 4, 524303, 983040, 5, -65526, 655360, 0, -65525, 262144, 5, -65524, 458752, 5, -65523, 851968, 0, -65522, 917504, 0, -65531, 917504, 0, -65530, 262144, 5, -65529, 327680, 5, -65528, 393216, 5, -65527, 458752, 5, -65535, 655360, 0, -65534, 720896, 0, -65533, 262144, 5, -65532, 458752, 5, 589825, 655360, 6, 589826, 720896, 6, 589827, 0, 7, 589828, 196608, 7, 589829, 917504, 6, 589830, 0, 7, 589831, 65536, 7, 589832, 131072, 7, 589833, 196608, 7, 589834, 655360, 6, 589835, 0, 7, 589836, 196608, 7, 589837, 851968, 6, 589838, 917504, 6, 458758, 0, 5, 524294, 0, 6, 458759, 65536, 5, 524295, 65536, 6, 458760, 131072, 5, 524296, 131072, 6, 458761, 196608, 5, 524297, 196608, 6, 6, 262144, 6, 65542, 262144, 7, 7, 327680, 6, 65543, 327680, 7, 8, 393216, 6, 65544, 393216, 7, 9, 458752, 6, 65545, 458752, 7, 131079, 196608, 0, 196615, 196608, 1, 131080, 0, 0, 196616, 0, 1, 262151, 196608, 0, 327687, 196608, 1, 262152, 0, 2, 327688, 0, 1, 393223, 196608, 2, 393224, 0, 2, 262153, 65536, 2, 327689, 65536, 1, 393225, 65536, 2, 262154, 131072, 2, 327690, 131072, 1, 393226, 131072, 2, 262155, 196608, 2, 327691, 196608, 1, 393227, 196608, 2, 131076, 0, 0, 196612, 0, 1, 262148, 0, 0, 131077, 65536, 0, 196613, 65536, 1, 262149, 65536, 0, 131078, 131072, 0, 196614, 131072, 1, 262150, 131072, 0, 131081, 65536, 0, 196617, 65536, 1, 131082, 131072, 0, 196618, 131072, 1, 131083, 196608, 0, 196619, 196608, 1, 327684, 0, 1, 393220, 0, 2, 327685, 65536, 1, 393221, 65536, 2, 327686, 131072, 1, 393222, 131072, 2, 458762, 786432, 4, 524298, 786432, 5, 458757, 786432, 4, 524293, 786432, 5, 458756, 196608, 5, 524292, 196608, 6, 458764, 196608, 5, 524300, 196608, 6, 458763, 0, 5, 524299, 0, 6, 458755, 0, 5, 524291, 0, 6, 458765, 851968, 4, 524301, 851968, 5, 458766, 917504, 4, 524302, 917504, 5, 13, 851968, 1, 65549, 851968, 2, 14, 917504, 1, 65550, 917504, 2, 1, 655360, 1, 65537, 655360, 2, 2, 720896, 1, 65538, 720896, 2, 458753, 655360, 4, 524289, 655360, 5, 458754, 720896, 4, 524290, 720896, 5, 393217, 655360, 3, 393218, 720896, 3, 327681, 655360, 3, 327682, 720896, 3, 262145, 655360, 3, 262146, 720896, 3, 196609, 655360, 3, 196610, 720896, 3, 131073, 655360, 3, 131074, 720896, 3, 393229, 851968, 3, 393230, 917504, 3, 327693, 851968, 3, 327694, 917504, 3, 262157, 851968, 3, 262158, 917504, 3, 196621, 851968, 3, 196622, 917504, 3, 131085, 851968, 3, 131086, 917504, 3, 10, 786432, 1, 65546, 786432, 2, 5, 786432, 1, 65541, 786432, 2, 3, 262144, 6, 65539, 262144, 7, 11, 262144, 6, 65547, 262144, 7, 12, 458752, 6, 65548, 458752, 7, 4, 458752, 6, 65540, 458752, 7, 131075, 0, 0, 196611, 0, 1, 262147, 0, 2, 327683, 0, 3, 393219, 0, 4, 131084, 0, 0, 196620, 0, 1, 262156, 0, 2, 327692, 0, 3, 393228, 0, 4)
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("2_2la2r")]
+position = Vector2(256, 216)
+
+[node name="LevelTransition" parent="." instance=ExtResource("3_2la2r")]
+position = Vector2(256, 232)
+level = "uid://fx5gqyncyfnl"
+target_transition_area = "LevelTransition3"
+center_player = true
+side = 3
+
+[node name="LevelTransition2" parent="." instance=ExtResource("3_2la2r")]
+position = Vector2(256, 48)
+level = "uid://btijs63ewuax"
+center_player = true
+side = 2
+
+[node name="PressurePlate" parent="." instance=ExtResource("5_swvnj")]
+position = Vector2(176, 112)
+
+[node name="BarredDoor" parent="." instance=ExtResource("6_m3xjo")]
+position = Vector2(224, 56)
+
+[node name="PushableStatue" parent="." instance=ExtResource("7_4dhgi")]
+position = Vector2(272, 120)
+
+[connection signal="activated" from="PressurePlate" to="BarredDoor" method="open_door"]
+[connection signal="deactivated" from="PressurePlate" to="BarredDoor" method="close_door"]
