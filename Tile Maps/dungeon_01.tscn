@@ -255,6 +255,7 @@ sources/0 = SubResource("TileSetAtlasSource_yu6fw")
 [node name="Dungeon01" type="TileMap"]
 z_index = -1
 tile_set = SubResource("TileSet_d4rb0")
+rendering_quadrant_size = 32
 format = 2
 script = ExtResource("1_vu78d")
 metadata/_custom_type_script = "uid://bg11jsax84hxl"
