@@ -20,7 +20,7 @@ layer_0/tile_data = PackedInt32Array(65536, 0, 1, 131072, 0, 2, 65537, 65536, 1,
 position = Vector2(208, 80)
 
 [node name="LevelTransition" parent="." instance=ExtResource("4_ax5fs")]
-position = Vector2(0, 64)
+position = Vector2(0, 40)
 level = "uid://btijs63ewuax"
 target_transition_area = "LevelTransition2"
 
