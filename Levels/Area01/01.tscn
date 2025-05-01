@@ -33,4 +33,4 @@ center_player = true
 side = 2
 
 [node name="Goblin" parent="." instance=ExtResource("5_pwydo")]
-position = Vector2(96, 32)
+position = Vector2(64, 40)

@@ -19,6 +19,69 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_fero8"]
 radius = 14.0357
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_de2jd"]
+load_path = "res://.godot/imported/DestroySmoke.png-06d3df98e7e02e70c641b9535b2a50b0.ctex"
+
+[sub_resource type="Animation" id="Animation_g4voq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_mfkxi"]
+resource_name = "destroy"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tyi5"]
+_data = {
+&"RESET": SubResource("Animation_g4voq"),
+&"destroy": SubResource("Animation_mfkxi")
+}
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dl88"]
 radius = 5.0
 height = 16.0
@@ -720,73 +783,16 @@ min_amount = 1
 max_amount = 4
 metadata/_custom_type_script = "uid://cofkpbwtaclyk"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_de2jd"]
-load_path = "res://.godot/imported/DestroySmoke.png-06d3df98e7e02e70c641b9535b2a50b0.ctex"
-
-[sub_resource type="Animation" id="Animation_g4voq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_mfkxi"]
-resource_name = "destroy"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tyi5"]
-_data = {
-&"RESET": SubResource("Animation_g4voq"),
-&"destroy": SubResource("Animation_mfkxi")
-}
-
 [node name="Goblin" type="CharacterBody2D"]
 collision_layer = 256
 collision_mask = 272
 script = ExtResource("1_2shxi")
+
+[node name="VisionArea" parent="." instance=ExtResource("14_iw3sr")]
+position = Vector2(0, -18)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
+polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)
 
 [node name="HurtBox" parent="." instance=ExtResource("7_jxqj8")]
 
@@ -801,6 +807,21 @@ debug_color = Color(0.659795, 0.509894, 0.199389, 0.42)
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_fero8")
 debug_color = Color(0.659795, 0.509894, 0.199389, 0.42)
+
+[node name="DestroyEffectSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -9)
+texture = SubResource("CompressedTexture2D_de2jd")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DestroyEffectSprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_1tyi5")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1dl88")
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.814666, 0.490047, 0, 1)
@@ -820,10 +841,6 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
 shape = SubResource("CircleShape2D_fero8")
 debug_color = Color(0.659795, 0.509894, 0.199389, 0.42)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_1dl88")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -861,21 +878,4 @@ next_state = NodePath("../Idle")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 max_polyphony = 4
 
-[node name="DestroyEffectSprite" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(0, -9)
-texture = SubResource("CompressedTexture2D_de2jd")
-hframes = 6
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DestroyEffectSprite"]
-libraries = {
-&"": SubResource("AnimationLibrary_1tyi5")
-}
-
 [node name="PersistentDataHandler" parent="." instance=ExtResource("16_1tyi5")]
-
-[node name="VisionArea" parent="." instance=ExtResource("14_iw3sr")]
-position = Vector2(0, -18)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
-polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)
