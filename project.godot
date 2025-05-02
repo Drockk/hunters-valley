@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hunters Valley"
-run/main_scene="uid://fx5gqyncyfnl"
+run/main_scene="uid://dbswm6tl7gx30"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

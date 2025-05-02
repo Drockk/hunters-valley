@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://d37bsskbifcuj"]
+
+[ext_resource type="Texture2D" uid="uid://df11jgeb30pet" path="res://npc/sprites/portraits/npc_portrait_02.png" id="1_3liqj"]
+[ext_resource type="Script" uid="uid://d0av7aohr3k2s" path="res://npc/scripts/npc_resource.gd" id="2_7c467"]
+[ext_resource type="Texture2D" uid="uid://cemvtrf5ckabo" path="res://npc/sprites/npc_sprite_02.png" id="3_7c467"]
+
+[resource]
+script = ExtResource("2_7c467")
+npc_name = "Nero"
+sprite = ExtResource("3_7c467")
+portrait = ExtResource("1_3liqj")
+dialog_audio_pitch = ""
+metadata/_custom_type_script = "uid://d0av7aohr3k2s"
