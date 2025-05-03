@@ -60,29 +60,19 @@ npc_resource = ExtResource("10_krbdk")
 
 [node name="PatrolLocation" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("12_r3wde")]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(-59, 0)
+position = Vector2(-85, -15)
 
 [node name="PatrolLocation2" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("12_r3wde")]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(60, 0)
+position = Vector2(80, -15)
 wait_time = 1.0
 
 [node name="PatrolLocation3" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("12_r3wde")]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(0, -86)
+position = Vector2(79, -81)
 wait_time = 1.0
 
 [node name="PatrolLocation4" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("12_r3wde")]
 modulate = Color(0, 1, 1, 1)
-position = Vector2(-93, -86)
-wait_time = 1.0
-
-[node name="PatrolLocation5" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("12_r3wde")]
-modulate = Color(0, 0, 1, 1)
-position = Vector2(-29, -46)
-wait_time = 1.0
-
-[node name="PatrolLocation6" parent="Npc2/NpcBehaviorPatrol" instance=ExtResource("12_r3wde")]
-modulate = Color(1, 0, 1, 1)
-position = Vector2(57, -50)
+position = Vector2(-83, -80)
 wait_time = 1.0

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdv6t4lkt8tcf"
-path="res://.godot/imported/chat_bubbles.svg-bb105719dcbb35f28b98b0b657c20d9a.ctex"
+path="res://.godot/imported/chat_bubbles.svg-970dd6efd288612ae07022e08879202f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://npc/icons/chat_bubbles.svg"
-dest_files=["res://.godot/imported/chat_bubbles.svg-bb105719dcbb35f28b98b0b657c20d9a.ctex"]
+source_file="res://GUI/dialog_system/icons/chat_bubbles.svg"
+dest_files=["res://.godot/imported/chat_bubbles.svg-970dd6efd288612ae07022e08879202f.ctex"]
 
 [params]
 

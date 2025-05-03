@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxs5gjd2cqaxo"
-path="res://.godot/imported/question_bubble.svg-430dfa331d8cc3d3ffc9263c44f2704d.ctex"
+uid="uid://b8f8tqhkiwun8"
+path="res://.godot/imported/picture_bubble.svg-ad3d88c49fdb3ebc770ec1ac9cafa293.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://npc/icons/question_bubble.svg"
-dest_files=["res://.godot/imported/question_bubble.svg-430dfa331d8cc3d3ffc9263c44f2704d.ctex"]
+source_file="res://GUI/dialog_system/icons/picture_bubble.svg"
+dest_files=["res://.godot/imported/picture_bubble.svg-ad3d88c49fdb3ebc770ec1ac9cafa293.ctex"]
 
 [params]
 
