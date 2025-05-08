@@ -56,7 +56,7 @@ npc_resource = ExtResource("8_jeo2k")
 [node name="NpcBehaviorWander" parent="Npc" instance=ExtResource("8_ua1y0")]
 
 [node name="DialogInteraction" parent="Npc" instance=ExtResource("10_r3wde")]
-enabled = null
+enabled = true
 
 [node name="DialogText" type="Node" parent="Npc/DialogInteraction"]
 script = ExtResource("11_mxs1d")
@@ -71,7 +71,7 @@ metadata/_custom_type_script = "uid://bncekorpq4qc6"
 
 [node name="DialogText3" type="Node" parent="Npc/DialogInteraction"]
 script = ExtResource("11_mxs1d")
-text = "TEST"
+text = "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST"
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
 
 [node name="Npc2" parent="." instance=ExtResource("7_icgqb")]
