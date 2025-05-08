@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnq1p74y2vc1i"]
+[gd_scene load_steps=5 format=3 uid="uid://bnq1p74y2vc1i"]
 
 [ext_resource type="Script" uid="uid://dwkrt5q4xq4lx" path="res://npc/scripts/patrol_location.gd" id="1_xdeq0"]
+[ext_resource type="FontFile" uid="uid://bdtgncon8l8mh" path="res://GUI/fonts/m5x7.ttf" id="2_rlkg0"]
 
 [sub_resource type="Gradient" id="Gradient_ipyvv"]
 offsets = PackedFloat32Array(0.552885, 0.817308, 1)
@@ -49,6 +50,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 0
 theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_rlkg0")
 theme_override_font_sizes/font_size = 8
 text = "wait: 0.0s"
 horizontal_alignment = 1
