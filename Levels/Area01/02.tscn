@@ -63,6 +63,7 @@ enabled = true
 [node name="DialogText" type="Node" parent="Npc/DialogInteraction"]
 script = ExtResource("11_mxs1d")
 text = "Hi... [b]Hero[/b] is that you?"
+npc_info = ExtResource("8_jeo2k")
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
 
 [node name="DialogText2" type="Node" parent="Npc/DialogInteraction"]
@@ -74,6 +75,7 @@ metadata/_custom_type_script = "uid://bncekorpq4qc6"
 [node name="DialogText3" type="Node" parent="Npc/DialogInteraction"]
 script = ExtResource("11_mxs1d")
 text = "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST"
+npc_info = ExtResource("8_jeo2k")
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
 
 [node name="Npc2" parent="." instance=ExtResource("7_icgqb")]
@@ -106,34 +108,42 @@ enabled = true
 
 [node name="DialogText" type="Node" parent="Npc2/DialogInteraction2"]
 script = ExtResource("11_mxs1d")
-text = "Yo! Hero! Will you help retrive my magical flute from the dungeon?"
+text = "Yo! Hero! Will you help retrive my magical
+flute from the dungeon?"
+npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
 
 [node name="DialogChoice" type="Node" parent="Npc2/DialogInteraction2"]
 script = ExtResource("16_xiy2e")
+npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://bhcstink1p1g8"
 
 [node name="DialogBranch" type="Node" parent="Npc2/DialogInteraction2/DialogChoice"]
 script = ExtResource("17_j3pfp")
 text = "Count on me"
+npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://cag2m3l08xh5p"
 
 [node name="DialogText" type="Node" parent="Npc2/DialogInteraction2/DialogChoice/DialogBranch"]
 script = ExtResource("11_mxs1d")
 text = "Thank you dear hero! You are a true speciment!"
+npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
 
 [node name="DialogText2" type="Node" parent="Npc2/DialogInteraction2/DialogChoice/DialogBranch"]
 script = ExtResource("11_mxs1d")
 text = "Oh, and be careful of the evil wizzard who lurks in the dungeon"
+npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
 
 [node name="DialogBranch2" type="Node" parent="Npc2/DialogInteraction2/DialogChoice"]
 script = ExtResource("17_j3pfp")
 text = "NO!"
+npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://cag2m3l08xh5p"
 
 [node name="DialogText" type="Node" parent="Npc2/DialogInteraction2/DialogChoice/DialogBranch2"]
 script = ExtResource("11_mxs1d")
 text = "Geez! Some lousy hero you are..."
+npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
