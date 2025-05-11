@@ -45,7 +45,10 @@ func start() -> void:
 	npc.update_animation()
 
 	await get_tree().create_timer(randf() * idle_duration + idle_duration * 0.5).timeout
+
 	# WALK PHASE
+	if npc.do_behavior == false:
+		return
 
 	npc.state = "walk"
 
@@ -56,6 +59,7 @@ func start() -> void:
 	npc.update_direction(global_position + _dir)
 	npc.update_animation()
 	await get_tree().create_timer(randf() * wander_duration + wander_duration * 0.5).timeout
+
 	# REPEAT
 	if npc.do_behavior == false:
 		return

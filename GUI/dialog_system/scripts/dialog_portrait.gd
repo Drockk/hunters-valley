@@ -65,6 +65,9 @@ func check_mouth_open(letter: String) -> void:
 		mouth_open_frames -= 1
 
 	if mouth_open_frames == 0:
-		open_mouth = false
+		if open_mouth == true:
+			open_mouth = false
+			audio.pitch_scale = randf_range(0.94, 1.02)
+			audio.play()
 
 	pass

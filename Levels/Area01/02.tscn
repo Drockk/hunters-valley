@@ -98,3 +98,10 @@ wait_time = 1.0
 modulate = Color(0, 1, 1, 1)
 position = Vector2(-83, -80)
 wait_time = 1.0
+
+[node name="DialogInteraction2" parent="Npc2" instance=ExtResource("10_r3wde")]
+enabled = true
+
+[node name="DialogText" type="Node" parent="Npc2/DialogInteraction2"]
+script = ExtResource("11_mxs1d")
+metadata/_custom_type_script = "uid://bncekorpq4qc6"
