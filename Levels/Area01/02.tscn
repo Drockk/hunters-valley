@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbswm6tl7gx30"]
+[gd_scene load_steps=19 format=3 uid="uid://dbswm6tl7gx30"]
 
 [ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_mwxiv"]
 [ext_resource type="PackedScene" uid="uid://mf1dfrwkw75m" path="res://Tile Maps/Grass-01.tscn" id="1_x70af"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bnq1p74y2vc1i" path="res://npc/patrol_location.tscn" id="12_r3wde"]
 [ext_resource type="Script" uid="uid://bhcstink1p1g8" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="16_xiy2e"]
 [ext_resource type="Script" uid="uid://cag2m3l08xh5p" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="17_j3pfp"]
+[ext_resource type="PackedScene" uid="uid://bt6cn003gpveg" path="res://01_dialog_master/dialog_master.tscn" id="18_j3pfp"]
 
 [node name="02" type="Node2D"]
 script = ExtResource("1_mwxiv")
@@ -147,3 +148,10 @@ script = ExtResource("11_mxs1d")
 text = "Geez! Some lousy hero you are..."
 npc_info = ExtResource("10_krbdk")
 metadata/_custom_type_script = "uid://bncekorpq4qc6"
+
+[node name="Npc3" parent="." instance=ExtResource("7_icgqb")]
+position = Vector2(352, 203)
+npc_resource = ExtResource("8_jeo2k")
+
+[node name="DialogMaster" parent="Npc3" instance=ExtResource("18_j3pfp")]
+dialog_file = "res://01_dialog_master/dialog_files/dialog_01.yaml"

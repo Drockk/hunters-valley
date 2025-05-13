@@ -35,6 +35,10 @@ window/size/window_height_override=1080
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=2
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/yaml/plugin.cfg")
+
 [gui]
 
 theme/custom_font="uid://d0vyjwfrdtw31"
