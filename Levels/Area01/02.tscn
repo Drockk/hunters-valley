@@ -59,7 +59,6 @@ npc_resource = ExtResource("8_jeo2k")
 [node name="NpcBehaviorWander" parent="Npc" instance=ExtResource("8_ua1y0")]
 
 [node name="DialogInteraction" parent="Npc" instance=ExtResource("10_r3wde")]
-enabled = true
 
 [node name="DialogText" type="Node" parent="Npc/DialogInteraction"]
 script = ExtResource("11_mxs1d")
@@ -105,7 +104,6 @@ position = Vector2(-83, -80)
 wait_time = 1.0
 
 [node name="DialogInteraction2" parent="Npc2" instance=ExtResource("10_r3wde")]
-enabled = true
 
 [node name="DialogText" type="Node" parent="Npc2/DialogInteraction2"]
 script = ExtResource("11_mxs1d")
@@ -155,3 +153,4 @@ npc_resource = ExtResource("8_jeo2k")
 
 [node name="DialogMaster" parent="Npc3" instance=ExtResource("18_j3pfp")]
 dialog_file = "res://01_dialog_master/dialog_files/dialog_01.yaml"
+hero_resource = ExtResource("12_5l2i7")

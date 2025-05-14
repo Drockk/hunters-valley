@@ -129,7 +129,6 @@ collision_layer = 0
 collision_mask = 4
 monitorable = false
 script = ExtResource("1_w4e83")
-enabled = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_o5nmy")

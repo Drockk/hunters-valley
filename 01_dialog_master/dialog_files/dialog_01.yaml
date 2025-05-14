@@ -1,38 +1,18 @@
-dialogue:
-    - id: 0
-      unique: true
-      talk:
-        - who: HERO
-          text: Witaj, starcze.
-        - who: NPC
-          text: Witaj, młodzieńcze. Czego szukasz?
-      action:
-        - next: 1
-    
-    - id: 1
-      talk:
-        - who: HERO
-          text: Słyszałem, że znasz drogę do ukrytej jaskini.
-        - who: NPC
-          text: To zależy... czy masz coś w zamian?
-      choice:
-        - text: Mam złoto.
-          action:
-            - next: 2
-        - text: Nie mam nic.
-          action:
-            - next: 3
-    
-    - id: 2
-      talk:
-        - who: NPC
-          text: Dobrze, zaprowadzę cię tam.
-      action:
-        - end: 1
-    
-    - id: 3
-      talk:
-        - who: NPC
-          text: W takim razie nie mogę ci pomóc.
-      action:
-        - end: 1
+dialogs:
+  - dialog: 0
+    unique: true
+    talk:
+    - who: HERO
+      text: Witaj, starcze.
+    - who: NPC
+      text: Witaj, młodzieńcze. Czego szukasz?
+  - dialog: 1
+    talk:
+    - who: HERO
+      text: Słyszałem, że znasz drogę do ukrytej jaskini.
+    - who: NPC
+      text: To zależy... czy masz coś w zamian?
+  # - dialog: 2
+  #   choice:
+  #   - text: Mam złoto.
+  #   - text: Nie mam nic.
