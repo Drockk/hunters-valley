@@ -53,24 +53,37 @@ func _on_area_exit(_a: Area2D) -> void:
 	pass
 
 func _player_interact() -> void:
-	var _r := await _send_notification("PLAYER GENDER FEMALE")
+	get_tree().paused = true
 
-	_parse_data(dialog_data)
+	for i in range(1, 10):
+		DmNotificationSystem.send_notification("HERO GENDER FEMALE")
 
-	var dialog_response := await _send_dialog(YAML.stringify(dialog_data).get_data())
-	print(dialog_response)
+	while not DmNotificationSystem.notification_queue_is_empty():
+		DmNotificationSystem.show_wait_screen()
+		await DmNotificationSystem.sent_all_notifications
 
-	_update_dialog_items_children()
+	DmNotificationSystem.hide_wait_screen()
 
-	player_interacted.emit()
+	get_tree().paused = false
 
-	await get_tree().process_frame
-	await get_tree().process_frame
 
-	DialogSystem.show_dialog(dialog_items)
+	# _parse_data(dialog_data)
 
-	DialogSystem.finished.connect(_on_dialog_finished)
+	# var dialog_response := await _send_dialog(YAML.stringify(dialog_data).get_data())
+	# print(dialog_response)
+
+	# _update_dialog_items_children()
+
+	# player_interacted.emit()
+
+	# await get_tree().process_frame
+	# await get_tree().process_frame
+
+	# DialogSystem.show_dialog(dialog_items)
+
+	# DialogSystem.finished.connect(_on_dialog_finished)
 	pass
+
 
 func _on_dialog_finished() -> void:
 	DialogSystem.finished.disconnect(_on_dialog_finished)
@@ -172,19 +185,6 @@ func _update_dialog_items_children() -> void:
 		if c is DialogItem:
 			dialog_items.append(c)
 	pass
-
-
-func _send_notification(_text: String) -> bool:
-	var notification_dict = {
-		"notification": {
-			"text": _text
-		}
-	}
-
-	http_request.send_notification(notification_dict)
-	await http_request.request_finished
-
-	return true
 
 func _send_dialog(_text: String) -> String:
 	var response: String = await http_request.send_dialog(_text)
