@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvnmv5pafc1ra"]
+
+[ext_resource type="Script" uid="uid://c015a70oid786" path="res://01_dialog_master/dialogs/scripts/dm_dialog_system.gd" id="1_5gh7e"]
+
+[sub_resource type="Gradient" id="Gradient_skopk"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5gh7e"]
+gradient = SubResource("Gradient_skopk")
+
+[node name="DmDialogSystem" type="Node"]
+process_mode = 3
+script = ExtResource("1_5gh7e")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.256)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_5gh7e")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Awaiting response from LLM"

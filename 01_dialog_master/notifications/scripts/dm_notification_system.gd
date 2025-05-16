@@ -55,6 +55,7 @@ func _send(message: Dictionary) -> void:
 	var parsed_message = _parse_message(message)
 	if parsed_message.is_empty():
 		printerr("A problem occurs when parsing the message")
+		return
 
 	var user_message: Dictionary = {
 		role = "user",
@@ -89,7 +90,7 @@ func _parse_message(text: Dictionary) -> String:
 	return result.get_data()
 
 
-func _on_request_completed(result, _response_code, _headers, body) ->void:
+func _on_request_completed(result, _response_code, _headers, body) -> void:
 	if result != HTTPRequest.RESULT_SUCCESS:
 		printerr("A problem occurs when sending a notification, response code: ", result)
 		return

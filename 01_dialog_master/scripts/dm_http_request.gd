@@ -1,8 +1,6 @@
 class_name DMHttpRequest extends AwaitableHTTPRequest
 
 func send_dialog(text: String) -> String:
-	print(text)
-
 	var user_message = {
 		role = "user",
 		content = text
@@ -28,6 +26,5 @@ func send_dialog(text: String) -> String:
 		return ""
 
 	var json = response.body_as_json()
-	print(json["message"]["content"])
 
-	return ""
+	return json["message"]["content"]

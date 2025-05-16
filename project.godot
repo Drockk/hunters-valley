@@ -26,6 +26,7 @@ GlobalSaveManager="*res://00_Globals/global_save_manager.gd"
 PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
 DialogSystem="*res://GUI/dialog_system/dialog_system.tscn"
 DmNotificationSystem="*res://01_dialog_master/notifications/dm_notification_system.tscn"
+DmDialogSystem="*res://01_dialog_master/dialogs/dm_dialog_system.tscn"
 
 [display]
 
@@ -38,7 +39,7 @@ window/vsync/vsync_mode=2
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/awaitable_http_request/plugin.cfg", "res://addons/yaml/plugin.cfg")
+enabled=PackedStringArray("res://addons/yaml/plugin.cfg")
 
 [gui]
 

@@ -15,7 +15,6 @@ var dialog_data: Dictionary
 var dialog_items: Array[DialogItem]
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var http_request: HTTPRequest = $AwaitableHTTPRequest
 
 func _get_configuration_warnings() -> PackedStringArray:
 	if dialog_file.is_empty():
@@ -55,33 +54,43 @@ func _on_area_exit(_a: Area2D) -> void:
 func _player_interact() -> void:
 	get_tree().paused = true
 
-	for i in range(1, 10):
-		DmNotificationSystem.send_notification("HERO GENDER FEMALE")
+	DmNotificationSystem.send_notification("HERO GENDER FEMALE") # TEMP
 
-	while not DmNotificationSystem.notification_queue_is_empty():
-		DmNotificationSystem.show_wait_screen()
+	DmNotificationSystem.show_wait_screen()
+	while not DmNotificationSystem.notification_queue_is_empty() and DmNotificationSystem.is_waiting_for_response:
 		await DmNotificationSystem.sent_all_notifications
 
+	await get_tree().create_timer(3).timeout
 	DmNotificationSystem.hide_wait_screen()
 
+	DmDialogSystem.show_wait_screen()
+	DmDialogSystem.dialog_ready.connect(_on_dialog_ready)
+	DmDialogSystem.send_dialog(dialog_data)
+	pass
+
+func _on_dialog_ready(dialog: String) -> void:
+	DmDialogSystem.hide_wait_screen()
+
+	DmDialogSystem.dialog_ready.disconnect(_on_dialog_ready)
+
+	var parse_result := YAML.parse(dialog)
+
+	dialog_data = parse_result.get_data()
+
 	get_tree().paused = false
+	_proceed_dialog()
+	pass
 
+func _proceed_dialog() -> void:
+	_parse_data(dialog_data)
+	_update_dialog_items_children()
+	player_interacted.emit()
 
-	# _parse_data(dialog_data)
+	await get_tree().process_frame
+	await get_tree().process_frame
 
-	# var dialog_response := await _send_dialog(YAML.stringify(dialog_data).get_data())
-	# print(dialog_response)
-
-	# _update_dialog_items_children()
-
-	# player_interacted.emit()
-
-	# await get_tree().process_frame
-	# await get_tree().process_frame
-
-	# DialogSystem.show_dialog(dialog_items)
-
-	# DialogSystem.finished.connect(_on_dialog_finished)
+	DialogSystem.show_dialog(dialog_items)
+	DialogSystem.finished.connect(_on_dialog_finished)
 	pass
 
 
@@ -185,9 +194,3 @@ func _update_dialog_items_children() -> void:
 		if c is DialogItem:
 			dialog_items.append(c)
 	pass
-
-func _send_dialog(_text: String) -> String:
-	var response: String = await http_request.send_dialog(_text)
-	await http_request.request_finished
-
-	return response
