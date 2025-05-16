@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt6cn003gpveg"]
+[gd_scene load_steps=10 format=3 uid="uid://bt6cn003gpveg"]
 
 [ext_resource type="Script" uid="uid://0bh5dy1prui1" path="res://01_dialog_master/scripts/dialog_master.gd" id="1_406do"]
 [ext_resource type="Texture2D" uid="uid://ovi7qewqjvlh" path="res://Interactables/dialog/sprites/dialog_interactable.png" id="2_a4lgc"]
+[ext_resource type="Script" uid="uid://h7tsjfxt6c6q" path="res://01_dialog_master/scripts/dm_http_request.gd" id="3_skopk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skopk"]
 size = Vector2(44, 34)
@@ -125,11 +126,11 @@ _data = {
 }
 
 [node name="DialogMaster" type="Area2D"]
+process_mode = 3
 collision_layer = 0
 collision_mask = 4
 monitorable = false
 script = ExtResource("1_406do")
-dialog_file = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_skopk")
@@ -146,3 +147,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_k34qd")
 }
 autoplay = "default"
+
+[node name="AwaitableHTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource("3_skopk")
+metadata/_custom_type_script = "uid://mwac6ejdfqpd"

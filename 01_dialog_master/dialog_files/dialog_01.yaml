@@ -1,6 +1,5 @@
 dialogs:
   - dialog: 0
-    unique: true
     talk:
     - who: HERO
       text: Witaj, starcze.
@@ -12,7 +11,19 @@ dialogs:
       text: Słyszałem, że znasz drogę do ukrytej jaskini.
     - who: NPC
       text: To zależy... czy masz coś w zamian?
-  # - dialog: 2
-  #   choice:
-  #   - text: Mam złoto.
-  #   - text: Nie mam nic.
+  - dialog: 2
+    choice:
+    - text: Mam złoto.
+      action:
+      - next: 3
+    - text: Nie mam nic.
+      action:
+      - next: 4
+  - dialog: 3
+    talk:
+    - who: NPC
+      text: Dobrze, zaprowadzę cię tam.
+  - dialog: 4
+    talk:
+    - who: NPC
+      text: W takim razie nie mogę ci pomóc.

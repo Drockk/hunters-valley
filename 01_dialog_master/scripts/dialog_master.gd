@@ -15,7 +15,7 @@ var dialog_data: Dictionary
 var dialog_items: Array[DialogItem]
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-
+@onready var http_request: HTTPRequest = $AwaitableHTTPRequest
 
 func _get_configuration_warnings() -> PackedStringArray:
 	if dialog_file.is_empty():
@@ -53,7 +53,13 @@ func _on_area_exit(_a: Area2D) -> void:
 	pass
 
 func _player_interact() -> void:
+	var _r := await _send_notification("PLAYER GENDER FEMALE")
+
 	_parse_data(dialog_data)
+
+	var dialog_response := await _send_dialog(YAML.stringify(dialog_data).get_data())
+	print(dialog_response)
+
 	_update_dialog_items_children()
 
 	player_interacted.emit()
@@ -105,11 +111,14 @@ func _parse_data(data: Dictionary) -> void:
 	for dialog in dialogs:
 		# Handle unique
 
-		if dialog.talk:
-			_handle_talk(dialog.talk)
-		# elif dialog.choice:
-		# 	_handle_choice(dialog.choice)
-			pass
+		if dialog.has("talk"):
+			var talk = dialog.get("talk")
+			if talk:
+				_handle_talk(talk)
+		elif dialog.has("choice"):
+			var choice = dialog.get("choice")
+			if choice:
+				_handle_choice(choice)
 	pass
 
 func _handle_talk(talk) -> void:
@@ -131,7 +140,26 @@ func _handle_choice(choice) -> void:
 	for line in choice:
 		var dialog_branch: DialogBranch = DialogBranch.new()
 
-		dialog_branch.text = choice.text
+		dialog_branch.text = line.text
+
+		if line.has("action"):
+			var action = line.get("action")
+			for e in action:
+				if e.has("next"):
+					var next = e.get("next")
+					var next_dialog = dialog_data.dialogs[next]
+
+					var talk = next_dialog.get("talk")
+					for linee in talk:
+						var dialog_text: DialogText = DialogText.new()
+
+						if linee.who != "NPC":
+							dialog_text.npc_info = hero_resource
+
+						dialog_text.text = linee.text as String
+		
+						dialog_branch.add_child(dialog_text)
+
 
 		dialog_choice.add_child(dialog_branch)
 
@@ -144,3 +172,22 @@ func _update_dialog_items_children() -> void:
 		if c is DialogItem:
 			dialog_items.append(c)
 	pass
+
+
+func _send_notification(_text: String) -> bool:
+	var notification_dict = {
+		"notification": {
+			"text": _text
+		}
+	}
+
+	http_request.send_notification(notification_dict)
+	await http_request.request_finished
+
+	return true
+
+func _send_dialog(_text: String) -> String:
+	var response: String = await http_request.send_dialog(_text)
+	await http_request.request_finished
+
+	return response
