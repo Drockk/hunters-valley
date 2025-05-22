@@ -41,9 +41,7 @@ func _process(_delta: float) -> void:
 	mutex.unlock()
 
 	var message: Dictionary = {
-		notification = {
-			text = notification_text
-		}
+		notification = notification_text
 	}
 
 	_send(message)
