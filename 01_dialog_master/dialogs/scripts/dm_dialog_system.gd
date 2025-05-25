@@ -62,10 +62,8 @@ func _on_request_completed(result, _response_code, _headers, body) -> void:
 	json.parse(body.get_string_from_utf8())
 	var response = json.get_data()
 	var dialog: String = response["message"]["content"] as String
-	print(dialog)
 	dialog = dialog.trim_prefix("```yaml")
 	dialog = dialog.trim_suffix("```")
-	print(dialog)
 
 	http_request.request_completed.disconnect(_on_request_completed)
 

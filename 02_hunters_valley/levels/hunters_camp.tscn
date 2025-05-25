@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ck51axushig8a"]
+[gd_scene load_steps=19 format=3 uid="uid://ck51axushig8a"]
 
 [ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_qsa1m"]
 [ext_resource type="PackedScene" uid="uid://cjg6cbo3iwyn0" path="res://02_hunters_valley/tile_maps/blocky_viking_village__tileset.tscn" id="2_xngr0"]
@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://d0mm4wd5mxu3g" path="res://02_hunters_valley/props/trees/tree_04.tscn" id="11_q0ihc"]
 [ext_resource type="PackedScene" uid="uid://bbf5iem24bpcl" path="res://02_hunters_valley/props/trees/tree_06.tscn" id="12_4ly54"]
 [ext_resource type="PackedScene" uid="uid://c2xetu2ka86y8" path="res://02_hunters_valley/props/trees/tree_05.tscn" id="12_dta1k"]
+[ext_resource type="PackedScene" uid="uid://ci40isu208v52" path="res://npc/npc.tscn" id="14_jvwqx"]
+[ext_resource type="Resource" uid="uid://bko0edptkrf7u" path="res://02_hunters_valley/npc/orr.tres" id="15_u3da1"]
+[ext_resource type="PackedScene" uid="uid://c1mlf8wnnxpb" path="res://npc/npc_behavior_wander.tscn" id="16_u3da1"]
+[ext_resource type="PackedScene" uid="uid://bt6cn003gpveg" path="res://01_dialog_master/dialog_master.tscn" id="17_e7oti"]
+[ext_resource type="Resource" uid="uid://dogvixbtx8mt5" path="res://Player/hero.tres" id="18_gfj0m"]
 
 [node name="HuntersCamp" type="Node2D"]
 script = ExtResource("1_qsa1m")
@@ -23,7 +28,8 @@ layer_0/tile_data = PackedInt32Array(196610, 786432, 7, 262146, 1048576, 9, 6553
 [node name="PlayerSpawn" parent="." instance=ExtResource("3_xngr0")]
 position = Vector2(344, 152)
 
-[node name="Buildings" type="Node" parent="."]
+[node name="Buildings" type="Node2D" parent="."]
+z_index = -1
 
 [node name="SmallHomeFront" parent="Buildings" instance=ExtResource("4_s4wbb")]
 position = Vector2(344, 72)
@@ -43,7 +49,7 @@ position = Vector2(352, 256)
 [node name="SmallHomeBack2" parent="Buildings" instance=ExtResource("5_db63w")]
 position = Vector2(488, 256)
 
-[node name="Trees" type="Node" parent="."]
+[node name="Trees" type="Node2D" parent="."]
 
 [node name="Tree01" parent="Trees" instance=ExtResource("8_yymdc")]
 position = Vector2(414, 33)
@@ -231,7 +237,21 @@ position = Vector2(764, 16)
 [node name="Tree62" parent="Trees" instance=ExtResource("12_4ly54")]
 position = Vector2(-66, 80)
 
-[node name="Props" type="Node" parent="."]
+[node name="Props" type="Node2D" parent="."]
+z_index = -1
 
 [node name="Barrel" parent="Props" instance=ExtResource("6_ott4r")]
 position = Vector2(672, 96)
+
+[node name="npc" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Orr" parent="npc" instance=ExtResource("14_jvwqx")]
+position = Vector2(230, 164)
+npc_resource = ExtResource("15_u3da1")
+
+[node name="NpcWanderBehavior" parent="npc/Orr" instance=ExtResource("16_u3da1")]
+
+[node name="DialogMaster" parent="npc/Orr" instance=ExtResource("17_e7oti")]
+dialog_file = "res://02_hunters_valley/story/dialogs/orr_01.yaml"
+hero_resource = ExtResource("18_gfj0m")

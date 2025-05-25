@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_mlker")
 npc_name = "Nero"
+npc_description = ""
 sprite = ExtResource("3_4tdd8")
 portrait = ExtResource("1_fxmbg")
 dialog_audio_pitch = ""

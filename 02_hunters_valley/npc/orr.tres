@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://bko0edptkrf7u"]
+
+[ext_resource type="Script" uid="uid://d0av7aohr3k2s" path="res://npc/scripts/npc_resource.gd" id="1_c21fj"]
+[ext_resource type="Texture2D" uid="uid://dwr66fgi85p0v" path="res://npc/sprites/portraits/npc_portrait_01.png" id="1_q1j63"]
+[ext_resource type="Texture2D" uid="uid://dacad8ktqo3ar" path="res://npc/sprites/npc_sprite.png" id="3_s8qhx"]
+
+[resource]
+script = ExtResource("1_c21fj")
+npc_name = "Orr"
+npc_description = "Introduction:
+Orr is one of the senior hunters in the group residing in the secluded Hunter's Valley. As a veteran, he carries the weight of responsibility and experience, which shapes his commanding and pragmatic personality.
+
+Development:
+Orr is portrayed as a no-nonsense, disciplined individual who values efficiency over comfort. He wakes Yuv up with immediate orders, assigning him tasks without delay or empathy for his fatigue. His curt, practical demeanor demonstrates his military-like mindset. Despite his gruffness, Orr is deeply responsible and protective. When danger arises, he acts swiftly—grabbing his bow and saving Yuv from a deadly wolf without hesitation. His leadership is calm and decisive, based on experience rather than emotion.
+
+Conclusion:
+Orr may appear harsh and distant, but his actions prove that he cares for the safety and survival of his team. He is the embodiment of a seasoned leader who has seen much and lets his actions speak louder than words."
+sprite = ExtResource("3_s8qhx")
+portrait = ExtResource("1_q1j63")
+dialog_audio_pitch = ""
+metadata/_custom_type_script = "uid://d0av7aohr3k2s"
