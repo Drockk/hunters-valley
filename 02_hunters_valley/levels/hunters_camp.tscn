@@ -1,0 +1,237 @@
+[gd_scene load_steps=14 format=3 uid="uid://ck51axushig8a"]
+
+[ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_qsa1m"]
+[ext_resource type="PackedScene" uid="uid://cjg6cbo3iwyn0" path="res://02_hunters_valley/tile_maps/blocky_viking_village__tileset.tscn" id="2_xngr0"]
+[ext_resource type="PackedScene" uid="uid://bh8lnlytq7ure" path="res://Levels/player_spawn.tscn" id="3_xngr0"]
+[ext_resource type="PackedScene" uid="uid://buk1bwp5j6m1a" path="res://02_hunters_valley/buildings/small_home_front.tscn" id="4_s4wbb"]
+[ext_resource type="PackedScene" uid="uid://b81gw1p72ttov" path="res://02_hunters_valley/props/door_01.tscn" id="5_argju"]
+[ext_resource type="PackedScene" uid="uid://dqxfuyfhtfje0" path="res://02_hunters_valley/buildings/small_home_back.tscn" id="5_db63w"]
+[ext_resource type="PackedScene" uid="uid://kucvrcuug4qd" path="res://02_hunters_valley/props/barrel.tscn" id="6_ott4r"]
+[ext_resource type="PackedScene" uid="uid://co8l7kagafiq1" path="res://02_hunters_valley/props/trees/tree_01.tscn" id="8_yymdc"]
+[ext_resource type="PackedScene" uid="uid://dqsu8fispm23l" path="res://02_hunters_valley/props/trees/tree_02.tscn" id="9_c0n57"]
+[ext_resource type="PackedScene" uid="uid://cql5el2qpuasc" path="res://02_hunters_valley/props/trees/tree_03.tscn" id="10_8oqit"]
+[ext_resource type="PackedScene" uid="uid://d0mm4wd5mxu3g" path="res://02_hunters_valley/props/trees/tree_04.tscn" id="11_q0ihc"]
+[ext_resource type="PackedScene" uid="uid://bbf5iem24bpcl" path="res://02_hunters_valley/props/trees/tree_06.tscn" id="12_4ly54"]
+[ext_resource type="PackedScene" uid="uid://c2xetu2ka86y8" path="res://02_hunters_valley/props/trees/tree_05.tscn" id="12_dta1k"]
+
+[node name="HuntersCamp" type="Node2D"]
+script = ExtResource("1_qsa1m")
+
+[node name="BlockyVikingVillageTileset" parent="." instance=ExtResource("2_xngr0")]
+layer_0/tile_data = PackedInt32Array(196610, 786432, 7, 262146, 1048576, 9, 65539, 851968, 6, 131075, 917504, 1, 196611, 851968, 7, 262147, 917504, 9, 65540, 983040, 9, 131076, 786432, 7, 196612, 917504, 8, 262148, 917504, 8, 0, 917504, 8, 65536, 917504, 9, 131072, 786432, 3, 1, 983040, 8, 65537, 917504, 0, 131073, 851968, 1, 2, 1048576, 8, 3, 917504, 8, 4, 983040, 8, 5, 1048576, 8, 65541, 1048576, 9, 131077, 786432, 2, 6, 917504, 8, 65542, 917504, 9, 131078, 786432, 0, 7, 983040, 8, 65543, 983040, 9, 131079, 786432, 2, 8, 1048576, 8, 65544, 1048576, 9, 131080, 786432, 7, 196614, 917504, 8, 262150, 917504, 8, 327686, 917504, 8, 196615, 917504, 8, 262151, 917504, 8, 327687, 917504, 8, 196616, 1048576, 8, 262152, 1048576, 9, 327688, 1048576, 10, 327683, 917504, 10, 327684, 917504, 8, 196613, 917504, 8, 262149, 917504, 8, 327685, 786432, 8, 196608, 917504, 8, 262144, 917504, 9, 327680, 917504, 10, 196609, 917504, 2, 262145, 983040, 9, 327681, 786432, 8, 327682, 1048576, 10, 393216, 917504, 8, 458752, 917504, 9, 524288, 786432, 8, 393217, 983040, 8, 458753, 786432, 8, 524289, 983040, 10, 393218, 1048576, 8, 458754, 1048576, 9, 524290, 1048576, 10, 393219, 786432, 8, 458755, 917504, 9, 524291, 786432, 8, 393220, 983040, 8, 458756, 983040, 9, 524292, 983040, 10, 393221, 1048576, 8, 458757, 786432, 8, 524293, 1048576, 10, 393222, 917504, 8, 458758, 917504, 9, 524294, 917504, 10, 393223, 983040, 8, 458759, 983040, 9, 524295, 786432, 8, 393224, 1048576, 8, 458760, 786432, 8, 524296, 1048576, 10, 196617, 917504, 8, 262153, 917504, 9, 327689, 786432, 8, 196618, 917504, 2, 262154, 983040, 9, 327690, 786432, 8, 196619, 1048576, 2, 262155, 1048576, 9, 327691, 1048576, 10, 9, 786432, 8, 65545, 917504, 9, 131081, 786432, 7, 10, 786432, 8, 65546, 917504, 0, 131082, 1376256, 4, 11, 1048576, 8, 65547, 1048576, 0, 131083, 1048576, 1, 393225, 917504, 8, 458761, 917504, 9, 524297, 917504, 10, 393226, 983040, 8, 458762, 983040, 9, 524298, 786432, 8, 393227, 1048576, 8, 458763, 786432, 8, 524299, 1048576, 10, -131072, 917504, 9, -65536, 917504, 10, -131071, 983040, 9, -65535, 983040, 10, -131070, 1048576, 9, -65534, 786432, 8, -196605, 786432, 8, -131069, 917504, 9, -65533, 917504, 10, -196604, 786432, 8, -131068, 983040, 9, -65532, 786432, 8, -196603, 786432, 8, -131067, 1048576, 9, -65531, 1048576, 10, -196602, 786432, 8, -131066, 917504, 9, -65530, 917504, 10, -196601, 786432, 8, -131065, 786432, 8, -65529, 983040, 10, -196600, 786432, 8, -131064, 1048576, 9, -65528, 1048576, 10, -196599, 786432, 8, -131063, 917504, 9, -65527, 917504, 10, -196598, 786432, 8, -131062, 983040, 9, -65526, 983040, 10, -196597, 786432, 8, -131061, 1048576, 9, -65525, 1048576, 10, 589825, 983040, 8, 655361, 983040, 9, 720897, 983040, 10, 589826, 1048576, 8, 655362, 786432, 8, 720898, 1048576, 10, 589827, 1048576, 8, 655363, 1048576, 9, 720899, 1048576, 10, 589824, 917504, 8, 655360, 786432, 8, 720896, 917504, 10, 589828, 917504, 8, 655364, 917504, 9, 720900, 917504, 10, 589829, 983040, 8, 655365, 786432, 8, 720901, 983040, 10, 589830, 1048576, 8, 655366, 1048576, 9, 720902, 1048576, 10, 589831, 917504, 8, 655367, 917504, 9, 720903, 917504, 10, 589832, 983040, 8, 655368, 786432, 8, 720904, 983040, 10, 589833, 1048576, 8, 655369, 1048576, 9, 720905, 1048576, 10, 589834, 917504, 8, 655370, 786432, 8, 720906, 917504, 10, 589835, 983040, 8, 655371, 786432, 8, 720907, 983040, 10, 589836, 917504, 8, 655372, 917504, 9, 720908, 917504, 10, 589837, 983040, 8, 655373, 983040, 9, 720909, 983040, 10, 589838, 1114112, 4, 655374, 1114112, 9, 720910, 1114112, 10, 393228, 786432, 8, 458764, 917504, 9, 524300, 917504, 10, 393229, 983040, 8, 458765, 983040, 9, 524301, 983040, 10, 393230, 1114112, 9, 458766, 1114112, 9, 524302, 1114112, 1, 196620, 786432, 8, 262156, 917504, 9, 327692, 917504, 10, 196621, 983040, 8, 262157, 983040, 9, 327693, 983040, 10, 196622, 1114112, 9, 262158, 1114112, 1, 327694, 1114112, 9, 12, 786432, 8, 65548, 917504, 9, 131084, 917504, 10, 13, 983040, 8, 65549, 983040, 9, 131085, 983040, 10, 14, 1114112, 9, 65550, 1114112, 9, 131086, 1114112, 9, -196596, 786432, 8, -131060, 917504, 9, -65524, 917504, 10, -196595, 786432, 8, -131059, 983040, 9, -65523, 983040, 10, -196594, 1114112, 1, -131058, 1114112, 9, -65522, 1114112, 9, -131075, 786432, 8, -65539, 917504, 9, -3, 917504, 10, -131074, 786432, 8, -65538, 983040, 9, -2, 983040, 10, -131073, 786432, 8, -65537, 1048576, 9, -1, 786432, 8, 65533, 917504, 8, 131069, 917504, 9, 196605, 786432, 6, 65534, 983040, 8, 131070, 983040, 9, 196606, 786432, 3, 65535, 1048576, 8, 131071, 1048576, 9, 196607, 786432, 2, 262141, 917504, 8, 327677, 917504, 9, 393213, 917504, 10, 262142, 983040, 8, 327678, 983040, 9, 393214, 983040, 10, 262143, 786432, 8, 327679, 1048576, 9, 393215, 1048576, 10, 458749, 917504, 8, 524285, 917504, 9, 589821, 917504, 10, 458750, 786432, 8, 524286, 983040, 9, 589822, 983040, 10, 458751, 786432, 8, 524287, 1048576, 9, 589823, 1048576, 10, 655357, 917504, 8, 720893, 917504, 9, 786429, 917504, 10, 655358, 983040, 8, 720894, 983040, 9, 786430, 983040, 10, 655359, 1048576, 8, 720895, 786432, 8, 786431, 1048576, 10, 65538, 786432, 7, 131074, 983040, 9, 196623, 1179648, 1, 131087, 1179648, 1, 65551, 1179648, 9, 15, 1310720, 6, -65521, 1179648, 2, -131057, 1179648, 1, -196593, 1310720, 7, 720911, 1179648, 10, 655375, 1179648, 9, 589839, 1179648, 9, 524303, 1179648, 1, 458767, 1310720, 7, 393231, 1179648, 1, 327695, 1376256, 7, 262159, 1179648, 9, -196592, 1245184, 9, -131056, 1245184, 9, -65520, 1245184, 2, 16, 1179648, 4, 65552, 1245184, 1, 131088, 1245184, 1, 196624, 1245184, 9, 262160, 1179648, 4, 327696, 1245184, 9, 393232, 1245184, 1, 458768, 1245184, 1, 524304, 1245184, 2, 589840, 1179648, 4, 655376, 1245184, 9, 720912, 1245184, 10, -262132, 983040, 3, -262131, 1048576, 3, -262135, 983040, 3, -262138, 983040, 3, -196611, 917504, 3, -196610, 983040, 3, -196609, 983040, 3, -262142, 983040, 3, -262141, 983040, 3, -262144, 983040, 3, -262143, 983040, 3, -262140, 983040, 3, -262139, 983040, 3, -262137, 983040, 3, -262136, 983040, 3, -262134, 983040, 3, -262133, 983040, 3, -262130, 1114112, 5, -262129, 1114112, 0, -262128, 1245184, 8, -196608, 786432, 8, -196607, 786432, 8, -196606, 786432, 8)
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("3_xngr0")]
+position = Vector2(344, 152)
+
+[node name="Buildings" type="Node" parent="."]
+
+[node name="SmallHomeFront" parent="Buildings" instance=ExtResource("4_s4wbb")]
+position = Vector2(344, 72)
+
+[node name="Door01" parent="Buildings/SmallHomeFront" instance=ExtResource("5_argju")]
+position = Vector2(0, 33)
+
+[node name="SmallHomeFront2" parent="Buildings" instance=ExtResource("4_s4wbb")]
+position = Vector2(488, 72)
+
+[node name="Door02" parent="Buildings/SmallHomeFront2" instance=ExtResource("5_argju")]
+position = Vector2(0, 33)
+
+[node name="SmallHomeBack" parent="Buildings" instance=ExtResource("5_db63w")]
+position = Vector2(352, 256)
+
+[node name="SmallHomeBack2" parent="Buildings" instance=ExtResource("5_db63w")]
+position = Vector2(488, 256)
+
+[node name="Trees" type="Node" parent="."]
+
+[node name="Tree01" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(414, 33)
+
+[node name="Tree02" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(598, 283)
+
+[node name="Tree03" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(639, -17)
+
+[node name="Tree04" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(297, -98)
+
+[node name="Tree05" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(-93, -68)
+
+[node name="Tree06" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(-57, 245)
+
+[node name="Tree07" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(27, 72)
+
+[node name="Tree08" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(168, 364)
+
+[node name="Tree09" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(-118, 677)
+
+[node name="Tree10" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(746, 645)
+
+[node name="Tree11" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(414, 489)
+
+[node name="Tree12" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(808, -143)
+
+[node name="Tree13" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(80, -121)
+
+[node name="Tree14" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(-77, 447)
+
+[node name="Tree15" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(165, 628)
+
+[node name="Tree16" parent="Trees" instance=ExtResource("8_yymdc")]
+position = Vector2(721, 399)
+
+[node name="Tree17" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(52, 653)
+
+[node name="Tree18" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(567, 682)
+
+[node name="Tree19" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(276, 453)
+
+[node name="Tree20" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(189, -9)
+
+[node name="Tree21" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(55, 316)
+
+[node name="Tree22" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(543, -115)
+
+[node name="Tree23" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(602, 474)
+
+[node name="Tree24" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(828, -5)
+
+[node name="Tree25" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(845, 472)
+
+[node name="Tree26" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(795, 238)
+
+[node name="Tree27" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(319, 637)
+
+[node name="Tree28" parent="Trees" instance=ExtResource("9_c0n57")]
+position = Vector2(-148, 300)
+
+[node name="Tree29" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(88, 462)
+
+[node name="Tree30" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(690, 283)
+
+[node name="Tree31" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(244, 265)
+
+[node name="Tree32" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(83, -2)
+
+[node name="Tree33" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(416, -122)
+
+[node name="Tree34" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(689, -112)
+
+[node name="Tree35" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(-117, 43)
+
+[node name="Tree36" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(834, 98)
+
+[node name="Tree37" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(829, 331)
+
+[node name="Tree38" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(465, 666)
+
+[node name="Tree39" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(239, 544)
+
+[node name="Tree40" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(-21, 592)
+
+[node name="Tree41" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(-5, 737)
+
+[node name="Tree42" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(849, 731)
+
+[node name="Tree43" parent="Trees" instance=ExtResource("10_8oqit")]
+position = Vector2(578, 567)
+
+[node name="Tree44" parent="Trees" instance=ExtResource("11_q0ihc")]
+position = Vector2(396, 360)
+
+[node name="Tree45" parent="Trees" instance=ExtResource("11_q0ihc")]
+position = Vector2(405, 206)
+
+[node name="Tree46" parent="Trees" instance=ExtResource("11_q0ihc")]
+position = Vector2(543, 199)
+
+[node name="Tree47" parent="Trees" instance=ExtResource("11_q0ihc")]
+position = Vector2(571, 56)
+
+[node name="Tree48" parent="Trees" instance=ExtResource("11_q0ihc")]
+position = Vector2(17, 488)
+
+[node name="Tree49" parent="Trees" instance=ExtResource("11_q0ihc")]
+position = Vector2(669, 582)
+
+[node name="Tree50" parent="Trees" instance=ExtResource("11_q0ihc")]
+position = Vector2(474, 550)
+
+[node name="Tree51" parent="Trees" instance=ExtResource("12_dta1k")]
+position = Vector2(353, 532)
+
+[node name="Tree52" parent="Trees" instance=ExtResource("12_dta1k")]
+position = Vector2(134, 40)
+
+[node name="Tree53" parent="Trees" instance=ExtResource("12_dta1k")]
+position = Vector2(-98, 575)
+
+[node name="Tree54" parent="Trees" instance=ExtResource("12_dta1k")]
+position = Vector2(458, 725)
+
+[node name="Tree55" parent="Trees" instance=ExtResource("12_dta1k")]
+position = Vector2(848, 637)
+
+[node name="Tree56" parent="Trees" instance=ExtResource("12_dta1k")]
+position = Vector2(835, 157)
+
+[node name="Tree57" parent="Trees" instance=ExtResource("12_dta1k")]
+position = Vector2(-155, -141)
+
+[node name="Tree58" parent="Trees" instance=ExtResource("12_4ly54")]
+position = Vector2(514, 379)
+
+[node name="Tree59" parent="Trees" instance=ExtResource("12_4ly54")]
+position = Vector2(191, 278)
+
+[node name="Tree60" parent="Trees" instance=ExtResource("12_4ly54")]
+position = Vector2(252, 35)
+
+[node name="Tree61" parent="Trees" instance=ExtResource("12_4ly54")]
+position = Vector2(764, 16)
+
+[node name="Tree62" parent="Trees" instance=ExtResource("12_4ly54")]
+position = Vector2(-66, 80)
+
+[node name="Props" type="Node" parent="."]
+
+[node name="Barrel" parent="Props" instance=ExtResource("6_ott4r")]
+position = Vector2(672, 96)

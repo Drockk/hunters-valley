@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://buk1bwp5j6m1a"]
+
+[ext_resource type="Texture2D" uid="uid://dlgejyqks6vpt" path="res://02_hunters_valley/tile_maps/sprites/Blocky_VikingVillage_Tileset.png" id="1_oe3lm"]
+
+[node name="SmallHomeFront" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oe3lm")
+region_enabled = true
+region_rect = Rect2(192, 832, 128, 128)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-3, -63, -8, -60, -54, 9, -54, 60, -46, 59, -40, 50, -11, 50, -11, 15, 11, 15, 11.333, 50.626, 42, 51, 49, 60, 54, 59, 54, 9, 8, -60, 3, -63)
