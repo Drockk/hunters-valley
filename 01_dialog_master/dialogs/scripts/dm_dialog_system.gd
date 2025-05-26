@@ -6,6 +6,8 @@ class_name DialogMasterDialogSystem extends Node
 var remote_llm_url = "http://127.0.0.1:11434/api/chat"
 var headers = ["Content-Type: application/json"]
 
+var chat_history = []
+
 signal dialog_ready(dialog: String)
 
 
@@ -28,9 +30,11 @@ func send_dialog(_dialog: Dictionary) -> void:
 		content = parsed_dialog
 	}
 
+	add_to_history(user_message)
+
 	var chat_message: Dictionary = {
 		model = "dm",
-		messages = [user_message],
+		messages = chat_history,
 		stream = false
 	}
 
@@ -61,6 +65,9 @@ func _on_request_completed(result, _response_code, _headers, body) -> void:
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var response = json.get_data()
+
+	add_to_history(response)
+
 	var dialog: String = response["message"]["content"] as String
 	dialog = dialog.trim_prefix("```yaml")
 	dialog = dialog.trim_suffix("```")
@@ -68,4 +75,9 @@ func _on_request_completed(result, _response_code, _headers, body) -> void:
 	http_request.request_completed.disconnect(_on_request_completed)
 
 	dialog_ready.emit(dialog)
+	pass
+
+
+func add_to_history(message: Dictionary) -> void:
+	chat_history.append(message)
 	pass

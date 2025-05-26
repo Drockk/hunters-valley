@@ -32,9 +32,13 @@ func hide_wait_screen() -> void:
 
 
 func _process(_delta: float) -> void:
-	if queue.is_empty() or is_waiting_for_response:
+	if is_waiting_for_response:
+		return
+
+	if queue.is_empty():
 		sent_all_notifications.emit()
 		return
+	
 
 	mutex.lock()
 	var notification_text = queue.front()
@@ -60,9 +64,11 @@ func _send(message: Dictionary) -> void:
 		content = parsed_message
 	}
 
+	DmDialogSystem.add_to_history(user_message)
+
 	var chat_message: Dictionary = {
 		model = "dm",
-		messages = [user_message],
+		messages = DmDialogSystem.chat_history,
 		stream = false
 	}
 
@@ -96,6 +102,9 @@ func _on_request_completed(result, _response_code, _headers, body) -> void:
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var response = json.get_data()
+
+	DmDialogSystem.add_to_history(response)
+
 	var status: String = response["message"]["content"] as String
 	status = status.trim_suffix("\n")
 
