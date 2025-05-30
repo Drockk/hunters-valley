@@ -255,3 +255,4 @@ npc_resource = ExtResource("15_u3da1")
 [node name="DialogMaster" parent="npc/Orr" instance=ExtResource("17_e7oti")]
 dialog_file = "res://02_hunters_valley/story/dialogs/orr_01.yaml"
 hero_resource = ExtResource("18_gfj0m")
+use_dm_llm = false

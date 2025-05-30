@@ -9,6 +9,8 @@ signal finished
 var dialog_file: String
 @export
 var hero_resource: NPCResource
+@export
+var use_dm_llm: bool = true
 
 var dialog_data: Dictionary
 
@@ -54,18 +56,20 @@ func _on_area_exit(_a: Area2D) -> void:
 func _player_interact() -> void:
 	get_tree().paused = true
 
-	DmNotificationSystem.send_notification("HERO GENDER FEMALE") # TEMP
+	if use_dm_llm:
+		DmNotificationSystem.show_wait_screen()
+		while not DmNotificationSystem.notification_queue_is_empty() and not DmNotificationSystem.is_waiting_for_response:
+			await DmNotificationSystem.sent_all_notifications
 
-	DmNotificationSystem.show_wait_screen()
-	while not DmNotificationSystem.notification_queue_is_empty() and not DmNotificationSystem.is_waiting_for_response:
-		await DmNotificationSystem.sent_all_notifications
+		await get_tree().create_timer(3).timeout
+		DmNotificationSystem.hide_wait_screen()
 
-	await get_tree().create_timer(3).timeout
-	DmNotificationSystem.hide_wait_screen()
-
-	DmDialogSystem.show_wait_screen()
-	DmDialogSystem.dialog_ready.connect(_on_dialog_ready)
-	DmDialogSystem.send_dialog(dialog_data)
+		DmDialogSystem.show_wait_screen()
+		DmDialogSystem.dialog_ready.connect(_on_dialog_ready)
+		DmDialogSystem.send_dialog(dialog_data)
+	else:
+		get_tree().paused = false
+		_proceed_dialog()
 	pass
 
 func _on_dialog_ready(dialog: String) -> void:
