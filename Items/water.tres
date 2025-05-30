@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://dqsgr3b1oombj"]
+
+[ext_resource type="Script" uid="uid://bxdpoali1vqmo" path="res://Items/item_effects/item_effect.gd" id="1_pnfhr"]
+[ext_resource type="AudioStream" uid="uid://c6ljnpmu0nkow" path="res://Items/item_effects/hp-up.wav" id="2_bmye5"]
+[ext_resource type="Script" uid="uid://ktgdrkfy4rok" path="res://Items/item_effects/item_effect_heal.gd" id="3_kqqwy"]
+[ext_resource type="Script" uid="uid://u8g88wpfeles" path="res://Items/scripts/item_data.gd" id="4_wd2et"]
+[ext_resource type="Texture2D" uid="uid://do30ed5mreitg" path="res://Items/sprites/items.png" id="5_ff1ml"]
+
+[sub_resource type="Resource" id="Resource_se85w"]
+script = ExtResource("3_kqqwy")
+heal_amount = 2
+audio = ExtResource("2_bmye5")
+use_description = ""
+metadata/_custom_type_script = "uid://ktgdrkfy4rok"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8xv6"]
+atlas = ExtResource("5_ff1ml")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("4_wd2et")
+name = "Water"
+description = "Tasty water"
+texture = SubResource("AtlasTexture_t8xv6")
+effects = Array[ExtResource("1_pnfhr")]([SubResource("Resource_se85w")])
+metadata/_custom_type_script = "uid://u8g88wpfeles"

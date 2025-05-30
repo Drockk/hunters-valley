@@ -9,10 +9,14 @@ func _init() -> void:
 
 
 func add_item(item: ItemData, count: int = 1) -> bool:
+	var notification_format = "Added %s of %fd to a player's inventory"
+	var notification_string = notification_format % [item.name, count]
+
 	for s in slots:
 		if s:
 			if s.item_data == item:
 				s.quantity += count
+				DmNotificationSystem.send_notification(notification_string)
 				return true
 	
 	for i in slots.size():
@@ -22,6 +26,7 @@ func add_item(item: ItemData, count: int = 1) -> bool:
 			new.quantity = count
 			slots[i] = new
 			new.changed.connect(slot_changed)
+			DmNotificationSystem.send_notification(notification_string)
 			return true
 	
 	print("inventory was full!")
