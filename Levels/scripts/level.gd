@@ -7,6 +7,10 @@ func _ready() -> void:
 	PlayerManager.set_as_parent(self)
 	LevelManager.level_load_started.connect(_free_level)
 	AudioManager.play_music(music)
+
+	for c in get_children():
+		if c is NPC:
+			DmNotificationSystem.send_notification(c.npc_resource.npc_description)
 	pass
 
 

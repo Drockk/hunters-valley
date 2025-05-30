@@ -243,16 +243,13 @@ z_index = -1
 [node name="Barrel" parent="Props" instance=ExtResource("6_ott4r")]
 position = Vector2(672, 96)
 
-[node name="npc" type="Node2D" parent="."]
-z_index = -1
-
-[node name="Orr" parent="npc" instance=ExtResource("14_jvwqx")]
+[node name="Orr" parent="." instance=ExtResource("14_jvwqx")]
 position = Vector2(230, 164)
 npc_resource = ExtResource("15_u3da1")
 
-[node name="NpcWanderBehavior" parent="npc/Orr" instance=ExtResource("16_u3da1")]
+[node name="NpcWanderBehavior" parent="Orr" instance=ExtResource("16_u3da1")]
 
-[node name="DialogMaster" parent="npc/Orr" instance=ExtResource("17_e7oti")]
+[node name="DialogMaster" parent="Orr" instance=ExtResource("17_e7oti")]
 dialog_file = "res://02_hunters_valley/story/dialogs/orr_01.yaml"
 hero_resource = ExtResource("18_gfj0m")
 use_dm_llm = false

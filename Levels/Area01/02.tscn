@@ -154,4 +154,4 @@ npc_resource = ExtResource("8_jeo2k")
 [node name="DialogMaster" parent="Npc3" instance=ExtResource("18_j3pfp")]
 dialog_file = "res://01_dialog_master/dialog_files/dialog_01.yaml"
 hero_resource = ExtResource("12_5l2i7")
-use_dm_llm = null
+use_dm_llm = true
