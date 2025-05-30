@@ -6,7 +6,15 @@
 
 [resource]
 script = ExtResource("1_sxhu3")
-npc_name = "Hero"
+npc_name = "Yuv"
+npc_description = "Introduction:
+Yuv is a young and relatively inexperienced hunter, introduced as someone still adapting to the harsh and disciplined life in the Hunter's Valley. Through his journey, he transforms from a naive youth into a braver and more aware individual.
+
+Development:
+Initially, Yuv appears passive and tired, overwhelmed by the journey and the demands placed on him. Despite his fatigue, he follows orders and sets out into the forest. His internal monologue reveals frustration and insecurity, making him relatable as someone still learning his place in the world. However, his curiosity and sense of duty drive him forward—even when he stumbles upon disturbing signs like the ruined logging camp or Alan’s corpse. Faced with fear, Yuv chooses to act—running to warn others, returning to help Terry, and attempting to stay alert during his watch. His fear is real, but he does not let it paralyze him completely.
+
+Conclusion:
+Yuv represents the coming-of-age arc in the story. He is not yet a hero, but he shows the potential to become one. His reactions to danger, though imperfect, are driven by courage and empathy. His journey is about learning to survive—and to care—in a world full of silent threats."
 sprite = ExtResource("3_ee264")
 portrait = ExtResource("1_i2l06")
 dialog_audio_pitch = ""

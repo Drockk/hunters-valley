@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ck51axushig8a"]
+[gd_scene load_steps=20 format=3 uid="uid://ck51axushig8a"]
 
 [ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_qsa1m"]
 [ext_resource type="PackedScene" uid="uid://cjg6cbo3iwyn0" path="res://02_hunters_valley/tile_maps/blocky_viking_village__tileset.tscn" id="2_xngr0"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c1mlf8wnnxpb" path="res://npc/npc_behavior_wander.tscn" id="16_u3da1"]
 [ext_resource type="PackedScene" uid="uid://bt6cn003gpveg" path="res://01_dialog_master/dialog_master.tscn" id="17_e7oti"]
 [ext_resource type="Resource" uid="uid://dogvixbtx8mt5" path="res://Player/hero.tres" id="18_gfj0m"]
+[ext_resource type="Resource" uid="uid://cfgipw17cpsfg" path="res://02_hunters_valley/npc/artur.tres" id="19_mkvll"]
 
 [node name="HuntersCamp" type="Node2D"]
 script = ExtResource("1_qsa1m")
@@ -251,5 +252,14 @@ npc_resource = ExtResource("15_u3da1")
 
 [node name="DialogMaster" parent="Orr" instance=ExtResource("17_e7oti")]
 dialog_file = "res://02_hunters_valley/story/dialogs/orr_01.yaml"
+hero_resource = ExtResource("18_gfj0m")
+use_dm_llm = false
+
+[node name="Artur" parent="." instance=ExtResource("14_jvwqx")]
+position = Vector2(702, 152)
+npc_resource = ExtResource("19_mkvll")
+
+[node name="DialogMaster" parent="Artur" instance=ExtResource("17_e7oti")]
+dialog_file = "res://02_hunters_valley/story/dialogs/arturt_01.yaml"
 hero_resource = ExtResource("18_gfj0m")
 use_dm_llm = false

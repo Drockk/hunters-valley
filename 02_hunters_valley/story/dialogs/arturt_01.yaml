@@ -1,0 +1,28 @@
+dialogs:
+  - dialog: 0
+    talk:
+    - who: NPC
+      text: Słyszę, że Orr wysłał kolejnego młodzika na poszukiwanie czarnych kurek?
+    - who: HERO
+      text: Tak, powiedział, że to dobre ćwiczenie na początek.
+    - who: NPC
+      text: Ha! Robi to każdemu nowemu. Chyba lubi patrzeć, jak się błąkacie po lesie.
+    - who: NPC
+      text: Ale skoro już ci się trafiło to zadanie, idź na południe, w okolice starego obozu drwali.
+    - who: NPC
+      text: Tam rosną całe łany kurek, jeśli tylko wiesz, gdzie patrzeć.
+    - who: NPC
+      text: Alan i Terry też tam poszli dziś rano. Może ich dogonisz.
+    - who: NPC
+      text: Tylko uważaj – las o tej porze potrafi być zdradliwy. Szczególnie, gdy jesteś sam.
+  - dialog: 1
+    choice:
+    - text: Dzięki za radę, ruszam od razu
+      action:
+      - next: 2
+  - dialog: 2
+    talk:
+    - who: HERO
+      text: Dzięki za radę, ruszam od razu.
+    - who: NPC
+      text: Powodzenia, młody. I pamiętaj – nie wszystko, co wygląda jak kurka, jest jadalne!

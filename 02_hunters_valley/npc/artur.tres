@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://cfgipw17cpsfg"]
+
+[ext_resource type="Script" uid="uid://d0av7aohr3k2s" path="res://npc/scripts/npc_resource.gd" id="1_4wpxt"]
+[ext_resource type="Texture2D" uid="uid://df11jgeb30pet" path="res://npc/sprites/portraits/npc_portrait_02.png" id="1_kg6y5"]
+[ext_resource type="Texture2D" uid="uid://cemvtrf5ckabo" path="res://npc/sprites/npc_sprite_02.png" id="3_d1qyi"]
+
+[resource]
+script = ExtResource("1_4wpxt")
+npc_name = "Artur"
+npc_description = "Introduction:
+Artur, another senior member of the hunting party, serves as a bridge between the harsh reality of the wilderness and the younger members' inexperience. His demeanor is warmer and more approachable than Orr's.
+
+Development:
+From the beginning, Artur shows empathy toward Yuv, giving him helpful advice rather than just commands. He seems to understand the challenges faced by the younger hunters and supports them subtly. In moments of crisis, however, Artur shows that he is no less courageous than Orr—quickly reacting to Yuv's report of Alan’s death, acknowledging the return of wolves, and helping save Terry. Artur is thoughtful and emotionally aware, evident in his concern for Terry’s family and his shock when learning about Alan’s fate.
+
+Conclusion:
+Artur balances strength and compassion. He brings a human element to the group’s hardened survivalism, making him a vital presence in both everyday life and moments of crisis."
+sprite = ExtResource("3_d1qyi")
+portrait = ExtResource("1_kg6y5")
+dialog_audio_pitch = ""
+metadata/_custom_type_script = "uid://d0av7aohr3k2s"

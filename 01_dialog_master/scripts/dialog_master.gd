@@ -58,7 +58,7 @@ func _player_interact() -> void:
 
 	if use_dm_llm:
 		DmNotificationSystem.show_wait_screen()
-		while not DmNotificationSystem.notification_queue_is_empty() and not DmNotificationSystem.is_waiting_for_response:
+		while not DmNotificationSystem.notification_queue_is_empty() and DmNotificationSystem.is_waiting_for_response:
 			await DmNotificationSystem.sent_all_notifications
 
 		await get_tree().create_timer(3).timeout

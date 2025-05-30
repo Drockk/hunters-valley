@@ -5,60 +5,40 @@ dialogs:
       text: O! Widzę, że w końcu się obudziłeś!
     - who: NPC
       text: Spałeś tak długo, że myślałem, że cię do chatki wciągnął jakiś duch lasu.
+    - who: HERO
+      text: Długa podróż daje się we znaki. Nie myślałem, że będę tak zmęczony
+    - who: NPC
+      text: Długa podróż? Myślałem, że jesteś tu na polowanie, nie na wczasy.
+    - who: NPC
+      text: Mniejsza z tym masz już energię? Bo jeśli tak, to przydałoby się trochę chrust.
+    - who: NPC
+      text: Ognisko samo się nie podtrzyma, a Alan i Terry jeszcze nie wrócili.
+    - who: NPC
+      text: A skoro już tam będziesz w lesie... przynieś mi kilka czarnych kurek
+    - who: NPC
+      text: Kolacja będzie smaczniejsza
   - dialog: 1
     choice:
-    - text: Długa podróż daje się we znaki. Nie myślałem, że będę tak zmęczony
+    - text: Jasne, pójdę zaraz do lasu
       action:
       - next: 2
-    - text: Duch lasu? Mam nadzieję, że nie próbujesz mnie nastraszyć
+    - text: A może najpierw coś do picia?
       action:
       - next: 3
-    - text: Może gdybyście mnie obudzili wcześniej, już bym się czymś zajął
+    - text: Gdzie najlepiej szukać?
       action:
       - next: 4
   - dialog: 2
     talk:
     - who: NPC
-      text: Długa podróż? Myślałem, że jesteś tu na polowanie, nie na wczasy. Rusz się, las sam się nie ogarnie.
-  - dialog: 3
-    talk:
-    - who: NPC
-      text: Ha! Gdybyś go spotkał, pewnie uciekłby przed twoim chrapaniem. No ale skoro duchy cię nie porwały, to zbieraj chrust, zanim nas ognisko opuści.
-  - dialog: 4
-    talk:
-    - who: NPC
-      text: A może gdybyś wstał sam z siebie, nie trzeba by cię budzić. Ale skoro już jesteś, pokaż, że umiesz się przydać – ognisko dogasa.
-  - dialog: 5
-    talk:
-    - who: NPC
-      text: Mniejsza z tym masz już energię? Bo jeśli tak, to przydałoby się trochę chrust. Ognisko samo się nie podtrzyma, a Alan i Terry jeszcze nie wrócili.
-  - dialog: 6
-    choice:
-    - text: Jasne, pójdę zaraz do lasu
-      action:
-      - next: 7
-    - text: A może najpierw coś do picia? Nie będę szukał drewna na pusty żołądek
-      action:
-      - next: 8
-    - text: Gdzie najlepiej szukać?
-      action:
-      - next: 9
-  - dialog: 7
-    talk:
-    - who: NPC
       text: Idź, idź
-  - dialog: 8
+  - dialog: 3
     talk:
     - who: NPC
       text: Na twoje szczęście już przynieśliśmy wodę z strumienia
     - who: NPC
       text: Beczka z wodą jest obok chatki Artura
-  - dialog: 9
+  - dialog: 4
     talk:
     - who: NPC
       text: Idź w stronę starego obozu drwali, tam zawsze coś znajdziesz
-    - who: NPC
-      text: A skoro już tam będziesz w lesie... przynieś mi kilka czarnych kurek
-    - who: NPC
-      text: Kolacja będzie smaczniejsza
-
