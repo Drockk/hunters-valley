@@ -1114,7 +1114,7 @@ npc_resource = ExtResource("13_yxm00")
 [node name="DialogMaster" parent="Npc" instance=ExtResource("14_a62cl")]
 dialog_file = "res://02_hunters_valley/story/dialogs/alan_01.yaml"
 hero_resource = ExtResource("15_adj1x")
-use_dm_llm = true
+use_dm_llm = false
 
 [node name="LevelTransition" parent="." instance=ExtResource("12_6olq1")]
 position = Vector2(512, -32)
