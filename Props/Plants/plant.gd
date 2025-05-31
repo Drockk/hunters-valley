@@ -41,6 +41,5 @@ func drop_items() -> void:
 			drop.item_data = drops[i].item
 			self.get_parent().call_deferred("add_child", drop)
 			drop.global_position = self.global_position
-			# drop.velocity = self.velocity.rotated(randf_range(-1.5, 1.5)) * randf_range(0.9, 1.5)
 
 	pass
