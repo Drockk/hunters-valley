@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=2 format=3 uid="uid://cirty706pvtla"]
+
+[ext_resource type="Script" uid="uid://d0av7aohr3k2s" path="res://npc/scripts/npc_resource.gd" id="1_rgrau"]
+
+[resource]
+script = ExtResource("1_rgrau")
+npc_name = "Alan"
+npc_description = "Introduction:
+Alan is a young hunter and one of Yuv's companions in the story \"Hunter's Valley\". Though his role in the narrative is relatively brief, his presence—and especially his tragic fate—have a profound impact on the tone and development of the plot.
+
+Development:
+At the beginning of the story, Alan is already gone from the shared tent he occupies with Yuv, indicating that he is an early riser and likely dedicated to his tasks. It is implied that he and Terry went out to collect wood, showing initiative and responsibility. However, Alan’s character is revealed more through the consequences of his actions than through direct interaction. When Yuv finds Alan’s lifeless, mutilated body in the ruins of the old logging camp, it serves as a turning point in the story—shifting the tone from an ordinary hunting trip to a tale of real danger and suspense.
+
+Although we see little of Alan’s personality directly, the emotional reaction of Yuv, as well as the urgency in the response from Orr and Artur, suggest that Alan was a respected and valued member of the group. His death is not treated lightly, and his loss creates a sense of vulnerability and fear among the remaining characters.
+
+Conclusion:
+Alan represents the fragility of life in the wilderness and serves as a narrative catalyst that transforms a seemingly mundane setting into a place of lurking danger. Even without many spoken lines or actions, his death leaves a significant emotional and psychological impact on the group, particularly on Yuv."
+dialog_audio_pitch = ""
+metadata/_custom_type_script = "uid://d0av7aohr3k2s"

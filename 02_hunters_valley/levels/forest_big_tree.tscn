@@ -1,17 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://77s6ntnlnxxc"]
+[gd_scene load_steps=14 format=3 uid="uid://da5drpyyi482y"]
 
-[ext_resource type="PackedScene" uid="uid://cjg6cbo3iwyn0" path="res://02_hunters_valley/tile_maps/blocky_viking_village__tileset.tscn" id="1_18w0x"]
-[ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_bmoc2"]
-[ext_resource type="Texture2D" uid="uid://dlgejyqks6vpt" path="res://02_hunters_valley/tile_maps/sprites/Blocky_VikingVillage_Tileset.png" id="2_wb4h1"]
-[ext_resource type="PackedScene" uid="uid://bdibe6yj56mlr" path="res://02_hunters_valley/buildings/big_home_front.tscn" id="3_38ky5"]
-[ext_resource type="PackedScene" uid="uid://buk1bwp5j6m1a" path="res://02_hunters_valley/buildings/small_home_front.tscn" id="4_nfjuq"]
-[ext_resource type="PackedScene" uid="uid://dqxfuyfhtfje0" path="res://02_hunters_valley/buildings/small_home_back.tscn" id="5_npyd7"]
-[ext_resource type="PackedScene" uid="uid://b81gw1p72ttov" path="res://02_hunters_valley/props/door_01.tscn" id="6_bmoc2"]
-[ext_resource type="PackedScene" uid="uid://bh8lnlytq7ure" path="res://Levels/player_spawn.tscn" id="7_npyd7"]
-[ext_resource type="PackedScene" uid="uid://djfnrqbq2s0me" path="res://Levels/level_transition.tscn" id="8_bmoc2"]
+[ext_resource type="PackedScene" uid="uid://cjg6cbo3iwyn0" path="res://02_hunters_valley/tile_maps/blocky_viking_village__tileset.tscn" id="1_6e1o4"]
+[ext_resource type="Texture2D" uid="uid://dlgejyqks6vpt" path="res://02_hunters_valley/tile_maps/sprites/Blocky_VikingVillage_Tileset.png" id="2_opn5c"]
+[ext_resource type="PackedScene" uid="uid://co8l7kagafiq1" path="res://02_hunters_valley/props/trees/tree_01.tscn" id="3_vnkfn"]
+[ext_resource type="PackedScene" uid="uid://dqsu8fispm23l" path="res://02_hunters_valley/props/trees/tree_02.tscn" id="4_sigwr"]
+[ext_resource type="PackedScene" uid="uid://bh8lnlytq7ure" path="res://Levels/player_spawn.tscn" id="5_sigwr"]
+[ext_resource type="PackedScene" uid="uid://dqa3mcbt1s40t" path="res://02_hunters_valley/props/rocks/rock_01.tscn" id="6_fais7"]
+[ext_resource type="PackedScene" uid="uid://cql5el2qpuasc" path="res://02_hunters_valley/props/trees/tree_03.tscn" id="7_5sw2s"]
+[ext_resource type="PackedScene" uid="uid://d0mm4wd5mxu3g" path="res://02_hunters_valley/props/trees/tree_04.tscn" id="8_6olq1"]
+[ext_resource type="PackedScene" uid="uid://c2xetu2ka86y8" path="res://02_hunters_valley/props/trees/tree_05.tscn" id="9_8px4e"]
+[ext_resource type="PackedScene" uid="uid://bbf5iem24bpcl" path="res://02_hunters_valley/props/trees/tree_06.tscn" id="10_yxm00"]
+[ext_resource type="PackedScene" uid="uid://ci40isu208v52" path="res://npc/npc.tscn" id="11_5sw2s"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bmoc2"]
-texture = ExtResource("2_wb4h1")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnkfn"]
+texture = ExtResource("2_opn5c")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -955,7 +957,7 @@ texture_region_size = Vector2i(64, 64)
 20:16/0 = 0
 21:16/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_ievr2"]
+[sub_resource type="TileSet" id="TileSet_sigwr"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
@@ -964,41 +966,140 @@ terrain_set_0/terrain_0/name = "Path"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Water"
 terrain_set_0/terrain_1/color = Color(0.25, 0.318322, 0.5, 1)
-sources/0 = SubResource("TileSetAtlasSource_bmoc2")
+sources/0 = SubResource("TileSetAtlasSource_vnkfn")
 
-[node name="LumberjackCamp" type="Node2D"]
-script = ExtResource("1_bmoc2")
+[node name="ForestBigTree" type="Node2D"]
 
-[node name="BlockyVikingVillageTileset" parent="." instance=ExtResource("1_18w0x")]
-tile_set = SubResource("TileSet_ievr2")
-layer_0/tile_data = PackedInt32Array(0, 786432, 7, 65536, 917504, 9, 131072, 917504, 10, 1, 786432, 7, 65537, 983040, 9, 131073, 983040, 10, 2, 786432, 7, 65538, 1048576, 9, 131074, 1048576, 10, -196608, 917504, 8, -131072, 917504, 9, -65536, 917504, 10, -196607, 983040, 8, -131071, 983040, 9, -65535, 983040, 10, -196606, 1048576, 8, -131070, 1048576, 9, -65534, 1048576, 10, -131075, 917504, 8, -65539, 917504, 9, -3, 917504, 10, -131074, 983040, 8, -65538, 983040, 9, -2, 851968, 4, -131073, 1048576, 8, -65537, 1048576, 9, -1, 1048576, 10, 65533, 786432, 7, 131069, 917504, 9, 196605, 917504, 10, 65534, 983040, 2, 131070, 983040, 9, 196606, 983040, 10, 65535, 786432, 7, 131071, 1048576, 9, 196607, 1048576, 10, 3, 983040, 2, 65539, 917504, 9, 131075, 917504, 10, 4, 786432, 7, 65540, 983040, 9, 131076, 983040, 10, 5, 786432, 7, 65541, 1048576, 9, 131077, 1048576, 10, -196605, 917504, 8, -131069, 917504, 9, -65533, 851968, 4, -196604, 983040, 8, -131068, 983040, 9, -65532, 983040, 10, -196603, 1048576, 8, -131067, 1048576, 9, -65531, 1048576, 10, -262139, 983040, 3, -262138, 1048576, 3, -196602, 1048576, 4, -262140, 983040, 3, -262141, 983040, 3, -262142, 983040, 3, -262143, 983040, 3, -262144, 983040, 3, -196609, 983040, 3, -196610, 983040, 3, -196611, 983040, 3, -131066, 1048576, 4, -65530, 1048576, 4, 6, 786432, 5, 65542, 1048576, 4, 131078, 1048576, 4, 196614, 1048576, 5, 196613, 983040, 5, 196612, 983040, 5, 196611, 983040, 5, 196610, 983040, 5, 196609, 983040, 5, 196608, 983040, 5, 262143, 983040, 5, 262142, 983040, 5, 262141, 983040, 5, 262140, 917504, 5, 196604, 917504, 4, 131068, 917504, 4, -4, 917504, 4, -65540, 917504, 4, -131076, 917504, 4, -196612, 917504, 3, 65532, 786432, 6)
+[node name="BlockyVikingVillageTileset" parent="." instance=ExtResource("1_6e1o4")]
+tile_set = SubResource("TileSet_sigwr")
+layer_0/tile_data = PackedInt32Array(65535, 262144, 1, -1, 262144, 1, -65536, 262144, 1, 0, 262144, 1, 65534, 196608, 1, -2, 196608, 1, -65538, 196608, 0, -131071, 327680, 0, 65537, 327680, 2, 131070, 196608, 2, 131071, 262144, 2, 65536, 262144, 2, 1, 327680, 1, -65535, 327680, 1, -131072, 262144, 0, -65537, 262144, 0, -196607, 65536, 1, -196608, 65536, 1, -131073, 65536, 1, -131074, 65536, 1, -131075, 65536, 1, -65539, 65536, 1, -3, 65536, 1, 65533, 65536, 1, 131069, 65536, 1, 196605, 65536, 1, 196606, 65536, 1, 196607, 65536, 1, 131072, 65536, 1, 131073, 65536, 1, 131074, 65536, 1, 65538, 65536, 1, 2, 65536, 1, -65534, 65536, 1, -131070, 65536, 1, -196606, 65536, 1, 196609, 65536, 1, 196610, 65536, 1, 196611, 65536, 1, 262142, 65536, 1, 262143, 65536, 1, 196608, 65536, 1, 262140, 65536, 1, 262141, 65536, 1, -196612, 65536, 1, -196611, 65536, 1, -196610, 65536, 1, -262143, 65536, 1, -262142, 65536, 1, -262141, 65536, 1, -196609, 65536, 1, -262144, 65536, 1, -196605, 65536, 1, -131069, 65536, 1, -65533, 65536, 1, 3, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 131068, 65536, 1, 196604, 65536, 1, -4, 65536, 1, 65532, 65536, 1, -131076, 65536, 1, -65540, 65536, 1, 196603, 65536, 1, 262139, 65536, 1, 327675, 196608, 8, 65531, 65536, 1, 131067, 65536, 1, -65541, 65536, 1, -5, 65536, 1, -196613, 65536, 1, -131077, 65536, 1, -262149, 196608, 8, 196612, 65536, 1, 262148, 196608, 8, 65540, 65536, 1, 131076, 65536, 1, -65532, 65536, 1, 4, 65536, 1, -196604, 65536, 1, -131068, 65536, 1, -327676, 196608, 8, -262140, 65536, 1, 327676, 196608, 8, 327677, 196608, 8, 327678, 196608, 8, 327679, 196608, 8, 262144, 196608, 8, 262145, 196608, 8, 262146, 196608, 8, 262147, 196608, 8, -262148, 196608, 8, -262147, 196608, 8, -262146, 196608, 8, -262145, 196608, 8, -327680, 196608, 8, -327679, 196608, 8, -327678, 196608, 8, -327677, 196608, 8, 327684, 196608, 8, 327685, 196608, 8, 327682, 196608, 8, 327683, 196608, 8, 327680, 196608, 8, 327681, 196608, 8, 393214, 196608, 8, 393215, 196608, 8, 393212, 196608, 8, 393213, 196608, 8, 393210, 196608, 8, 393211, 196608, 8, -327686, 196608, 8, -327685, 196608, 8, -327684, 196608, 8, -327683, 196608, 8, -327682, 196608, 8, -327681, 196608, 8, -393216, 196608, 8, -393215, 196608, 8, -393214, 196608, 8, -393213, 196608, 8, -393212, 196608, 8, -393211, 196608, 8, -327675, 196608, 8, -262139, 196608, 8, -196603, 196608, 8, -131067, 196608, 8, -65531, 196608, 8, 5, 196608, 8, 65541, 196608, 8, 131077, 196608, 8, 196613, 196608, 8, 262149, 196608, 8, 262138, 196608, 8, 327674, 196608, 8, 131066, 196608, 8, 196602, 196608, 8, -6, 196608, 8, 65530, 196608, 8, -131078, 196608, 8, -65542, 196608, 8, -262150, 196608, 8, -196614, 196608, 8, -458746, 65536, 1, -393210, 196608, 8, -327674, 196608, 8, -262138, 196608, 8, -196602, 196608, 8, -131066, 196608, 8, -65530, 196608, 8, 6, 196608, 8, 65542, 196608, 8, 131078, 196608, 8, 196614, 196608, 8, 262150, 196608, 8, 327686, 196608, 8, 393222, 65536, 1, 393209, 196608, 8, 458745, 65536, 1, 262137, 196608, 8, 327673, 196608, 8, 131065, 196608, 8, 196601, 196608, 8, -7, 196608, 8, 65529, 196608, 8, -131079, 196608, 8, -65543, 196608, 8, -262151, 196608, 8, -196615, 196608, 8, -393223, 65536, 1, -327687, 196608, 8, -393222, 65536, 1, -393221, 65536, 1, -393220, 65536, 1, -393219, 65536, 1, -393218, 65536, 1, -393217, 65536, 1, -458752, 65536, 1, -458751, 65536, 1, -458750, 65536, 1, -458749, 65536, 1, -458748, 65536, 1, -458747, 65536, 1, 393220, 65536, 1, 393221, 65536, 1, 393218, 65536, 1, 393219, 65536, 1, 393216, 65536, 1, 393217, 65536, 1, 458750, 65536, 1, 458751, 65536, 1, 458748, 65536, 1, 458749, 65536, 1, 458746, 65536, 1, 458747, 65536, 1, -524281, 327680, 3, -458760, 196608, 3, -458759, 262144, 3, -458758, 262144, 3, -458757, 262144, 3, -458756, 262144, 3, -458755, 262144, 3, -458754, 262144, 3, -458753, 262144, 3, -524288, 262144, 3, -524287, 262144, 3, -524286, 262144, 3, -524285, 262144, 3, -524284, 262144, 3, -524283, 262144, 3, -524282, 262144, 3, 524280, 196608, 5, 458759, 327680, 5, 458744, 196608, 4, 393208, 196608, 4, 327672, 196608, 4, 262136, 196608, 4, 196600, 196608, 4, 131064, 196608, 4, 65528, 196608, 4, -8, 196608, 4, -65544, 196608, 4, -131080, 196608, 4, -196616, 196608, 4, -262152, 196608, 4, -327688, 196608, 4, -393224, 196608, 4, 393223, 327680, 4, 327687, 327680, 4, 262151, 327680, 4, 196615, 327680, 4, 131079, 327680, 4, 65543, 327680, 4, 7, 327680, 4, -65529, 65536, 5, -131065, 327680, 4, -196601, 327680, 4, -262137, 327680, 4, -327673, 327680, 4, -393209, 327680, 4, -458745, 327680, 4, 458758, 262144, 5, 458757, 262144, 5, 458756, 262144, 5, 458755, 262144, 5, 458754, 262144, 5, 458753, 262144, 5, 458752, 262144, 5, 524287, 262144, 5, 524286, 262144, 5, 524285, 262144, 5, 524284, 262144, 5, 524283, 262144, 5, 524282, 262144, 5, 524281, 262144, 5)
 
-[node name="SmallHomeFront" parent="." instance=ExtResource("3_38ky5")]
-position = Vector2(-72, -104)
+[node name="PlayerSpawn" parent="." instance=ExtResource("5_sigwr")]
+position = Vector2(24, 176)
 
-[node name="SmallHomeFront2" parent="." instance=ExtResource("4_nfjuq")]
-position = Vector2(208, -112)
+[node name="Tree11" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-40, -72)
 
-[node name="SmallHomeFront3" parent="." instance=ExtResource("5_npyd7")]
-position = Vector2(256, 120)
+[node name="Tree12" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(24, -72)
 
-[node name="SmallHomeFront4" parent="." instance=ExtResource("5_npyd7")]
-position = Vector2(72, 120)
+[node name="Tree13" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-8, -103)
 
-[node name="SmallHomeFront5" parent="." instance=ExtResource("5_npyd7")]
-position = Vector2(-104, 104)
+[node name="Tree10" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(64, -24)
 
-[node name="Door01" parent="." instance=ExtResource("6_bmoc2")]
-position = Vector2(208, -80)
+[node name="Tree08" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-64, -16)
 
-[node name="PlayerSpawn" parent="." instance=ExtResource("7_npyd7")]
-position = Vector2(96, 16)
+[node name="Tree09" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(0, -24)
 
-[node name="LevelTransition" parent="." instance=ExtResource("8_bmoc2")]
-position = Vector2(448, 32)
-level = "uid://b6fck448ueayw"
-target_transition_area = "LevelTransition2"
-side = 1
+[node name="Tree01" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-56, 24)
 
-[node name="LevelTransition2" parent="." instance=ExtResource("8_bmoc2")]
-position = Vector2(-256, 32)
+[node name="Tree02" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(-40, 24)
+
+[node name="Tree03" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-24, 24)
+
+[node name="Tree04" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(-8, 24)
+
+[node name="Tree05" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(16, 24)
+
+[node name="Tree06" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(32, 24)
+
+[node name="Tree07" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(48, 24)
+
+[node name="Rock01" parent="." instance=ExtResource("6_fais7")]
+position = Vector2(-320, 0)
+
+[node name="Rock02" parent="." instance=ExtResource("6_fais7")]
+position = Vector2(-384, 48)
+
+[node name="Rock03" parent="." instance=ExtResource("6_fais7")]
+position = Vector2(-256, 48)
+
+[node name="Rock04" parent="." instance=ExtResource("6_fais7")]
+position = Vector2(-320, 112)
+
+[node name="Tree14" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-304, -256)
+
+[node name="Tree15" parent="." instance=ExtResource("7_5sw2s")]
+position = Vector2(312, -256)
+
+[node name="Tree16" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(296, 256)
+
+[node name="Tree17" parent="." instance=ExtResource("8_6olq1")]
+position = Vector2(-240, 288)
+
+[node name="Tree18" parent="." instance=ExtResource("9_8px4e")]
+position = Vector2(40, -240)
+
+[node name="Tree19" parent="." instance=ExtResource("10_yxm00")]
+position = Vector2(120, 296)
+
+[node name="Tree20" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(264, 48)
+
+[node name="Tree21" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-408, -136)
+
+[node name="Tree22" parent="." instance=ExtResource("7_5sw2s")]
+position = Vector2(144, -136)
+
+[node name="Tree23" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(136, -312)
+
+[node name="Tree24" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-416, 352)
+
+[node name="Tree25" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(416, -344)
+
+[node name="Tree26" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(-200, 168)
+
+[node name="Tree27" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-80, -328)
+
+[node name="Tree28" parent="." instance=ExtResource("8_6olq1")]
+position = Vector2(144, 176)
+
+[node name="Tree29" parent="." instance=ExtResource("7_5sw2s")]
+position = Vector2(-192, -160)
+
+[node name="Tree30" parent="." instance=ExtResource("10_yxm00")]
+position = Vector2(224, -152)
+
+[node name="Tree31" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(-120, 344)
+
+[node name="Tree32" parent="." instance=ExtResource("7_5sw2s")]
+position = Vector2(-64, 208)
+
+[node name="Tree33" parent="." instance=ExtResource("9_8px4e")]
+position = Vector2(40, 208)
+
+[node name="Tree34" parent="." instance=ExtResource("10_yxm00")]
+position = Vector2(-408, 192)
+
+[node name="Tree35" parent="." instance=ExtResource("3_vnkfn")]
+position = Vector2(-192, -328)
+
+[node name="Tree36" parent="." instance=ExtResource("7_5sw2s")]
+position = Vector2(368, -176)
+
+[node name="Tree37" parent="." instance=ExtResource("4_sigwr")]
+position = Vector2(416, 152)
+
+[node name="Npc" parent="." instance=ExtResource("11_5sw2s")]
+position = Vector2(-304, 32)
+rotation = -1.5708
