@@ -1002,3 +1002,4 @@ side = 1
 
 [node name="LevelTransition2" parent="." instance=ExtResource("8_bmoc2")]
 position = Vector2(-256, 32)
+level = "uid://da5drpyyi482y"

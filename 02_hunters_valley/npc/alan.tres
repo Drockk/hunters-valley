@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="NPCResource" load_steps=2 format=3 uid="uid://cirty706pvtla"]
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://cirty706pvtla"]
 
 [ext_resource type="Script" uid="uid://d0av7aohr3k2s" path="res://npc/scripts/npc_resource.gd" id="1_rgrau"]
+[ext_resource type="Texture2D" uid="uid://df11jgeb30pet" path="res://npc/sprites/portraits/npc_portrait_02.png" id="1_sgxfe"]
+[ext_resource type="Texture2D" uid="uid://cemvtrf5ckabo" path="res://npc/sprites/npc_sprite_02.png" id="3_7cqyd"]
 
 [resource]
 script = ExtResource("1_rgrau")
@@ -15,5 +17,7 @@ Although we see little of Alan’s personality directly, the emotional reaction 
 
 Conclusion:
 Alan represents the fragility of life in the wilderness and serves as a narrative catalyst that transforms a seemingly mundane setting into a place of lurking danger. Even without many spoken lines or actions, his death leaves a significant emotional and psychological impact on the group, particularly on Yuv."
+sprite = ExtResource("3_7cqyd")
+portrait = ExtResource("1_sgxfe")
 dialog_audio_pitch = ""
 metadata/_custom_type_script = "uid://d0av7aohr3k2s"
