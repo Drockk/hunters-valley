@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bh8lnlytq7ure" path="res://Levels/player_spawn.tscn" id="11_7gjai"]
 [ext_resource type="PackedScene" uid="uid://droctfafs1tcn" path="res://02_hunters_valley/props/plants/black_mushroom.tscn" id="12_hshdf"]
 [ext_resource type="Script" uid="uid://cofkpbwtaclyk" path="res://Enemies/Scripts/drop_data.gd" id="13_j0l5h"]
-[ext_resource type="Resource" uid="uid://dxgs2xelhkhpu" path="res://Items/apple.tres" id="14_57y26"]
+[ext_resource type="Resource" uid="uid://7ed81k8fdr" path="res://Items/black_mushroom.tres" id="14_j0l5h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j3q2a"]
 texture = ExtResource("3_p2trl")
@@ -973,7 +973,7 @@ sources/0 = SubResource("TileSetAtlasSource_j3q2a")
 
 [sub_resource type="Resource" id="Resource_tfmra"]
 script = ExtResource("13_j0l5h")
-item = ExtResource("14_57y26")
+item = ExtResource("14_j0l5h")
 probality = 100.0
 min_amount = 1
 max_amount = 1
