@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ck51axushig8a"]
+[gd_scene load_steps=22 format=3 uid="uid://ck51axushig8a"]
 
 [ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_qsa1m"]
 [ext_resource type="PackedScene" uid="uid://cjg6cbo3iwyn0" path="res://02_hunters_valley/tile_maps/blocky_viking_village__tileset.tscn" id="2_xngr0"]
@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://cfgipw17cpsfg" path="res://02_hunters_valley/npc/artur.tres" id="19_mkvll"]
 [ext_resource type="PackedScene" uid="uid://dchrqe65aspni" path="res://Interactables/TreasureChest/TreasureChest.tscn" id="19_w7vjw"]
 [ext_resource type="Resource" uid="uid://dqsgr3b1oombj" path="res://Items/water.tres" id="20_s2h1o"]
+[ext_resource type="PackedScene" uid="uid://djfnrqbq2s0me" path="res://Levels/level_transition.tscn" id="21_s2h1o"]
 
 [node name="HuntersCamp" type="Node2D"]
 script = ExtResource("1_qsa1m")
@@ -262,3 +263,7 @@ use_dm_llm = false
 [node name="TreasureChest" parent="." instance=ExtResource("19_w7vjw")]
 position = Vector2(672, 101)
 item_data = ExtResource("20_s2h1o")
+
+[node name="LevelTransition" parent="." instance=ExtResource("21_s2h1o")]
+position = Vector2(-192, 160)
+level = "uid://b6fck448ueayw"

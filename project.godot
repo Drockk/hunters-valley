@@ -20,13 +20,13 @@ config/icon="res://icon.svg"
 AudioManager="*res://00_Globals/global_audio_manager.gd"
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
 PlayerHud="*res://GUI/player_hud/player_hud.tscn"
+DmDialogSystem="*res://01_dialog_master/dialogs/dm_dialog_system.tscn"
 DmNotificationSystem="*res://01_dialog_master/notifications/dm_notification_system.tscn"
 PlayerManager="*res://00_Globals/global_player_manager.gd"
 SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 GlobalSaveManager="*res://00_Globals/global_save_manager.gd"
 PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
 DialogSystem="*res://GUI/dialog_system/dialog_system.tscn"
-DmDialogSystem="*res://01_dialog_master/dialogs/dm_dialog_system.tscn"
 
 [display]
 

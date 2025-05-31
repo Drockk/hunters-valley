@@ -103,13 +103,14 @@ func _on_request_completed(result, _response_code, _headers, body) -> void:
 	json.parse(body.get_string_from_utf8())
 	var response = json.get_data()
 
-	DmDialogSystem.add_to_history(response["message"])
+	if response.has("message"):
+		DmDialogSystem.add_to_history(response["message"])
 
-	var status: String = response["message"]["content"] as String
-	status = status.trim_suffix("\n")
+		var status: String = response["message"]["content"] as String
+		status = status.trim_suffix("\n")
 
-	if status != "OK":
-		printerr("The model will not return an 'OK' response, the model's response: ", status)
+		if status != "OK":
+			printerr("The model will not return an 'OK' response, the model's response: ", status)
 
 	http_request.request_completed.disconnect(_on_request_completed)
 
