@@ -1,0 +1,5 @@
+dialogs:
+  - dialog: 0
+    talk:
+    - who: HERO
+      text: Nie… to niemożliwe…

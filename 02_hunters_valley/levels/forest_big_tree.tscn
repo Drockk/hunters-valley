@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://da5drpyyi482y"]
+[gd_scene load_steps=19 format=3 uid="uid://da5drpyyi482y"]
 
 [ext_resource type="PackedScene" uid="uid://cjg6cbo3iwyn0" path="res://02_hunters_valley/tile_maps/blocky_viking_village__tileset.tscn" id="1_6e1o4"]
 [ext_resource type="Script" uid="uid://d0emw0clbmkli" path="res://Levels/scripts/level.gd" id="1_8px4e"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://ci40isu208v52" path="res://npc/npc.tscn" id="11_5sw2s"]
 [ext_resource type="PackedScene" uid="uid://djfnrqbq2s0me" path="res://Levels/level_transition.tscn" id="12_6olq1"]
 [ext_resource type="Resource" uid="uid://cirty706pvtla" path="res://02_hunters_valley/npc/alan.tres" id="13_yxm00"]
+[ext_resource type="PackedScene" uid="uid://bt6cn003gpveg" path="res://01_dialog_master/dialog_master.tscn" id="14_a62cl"]
+[ext_resource type="Resource" uid="uid://dogvixbtx8mt5" path="res://Player/hero.tres" id="15_adj1x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnkfn"]
 texture = ExtResource("2_opn5c")
@@ -1108,6 +1110,11 @@ position = Vector2(416, 152)
 position = Vector2(-304, 32)
 rotation = -1.5708
 npc_resource = ExtResource("13_yxm00")
+
+[node name="DialogMaster" parent="Npc" instance=ExtResource("14_a62cl")]
+dialog_file = "res://02_hunters_valley/story/dialogs/alan_01.yaml"
+hero_resource = ExtResource("15_adj1x")
+use_dm_llm = true
 
 [node name="LevelTransition" parent="." instance=ExtResource("12_6olq1")]
 position = Vector2(512, -32)
