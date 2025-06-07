@@ -2,43 +2,43 @@ dialogs:
   - dialog: 0
     talk:
     - who: NPC
-      text: O! Widzę, że w końcu się obudziłeś!
+      text: Oh! I see you've finally woken up!
     - who: NPC
-      text: Spałeś tak długo, że myślałem, że cię do chatki wciągnął jakiś duch lasu.
+      text: You slept so long, I thought some forest spirit had dragged you into the cabin.
     - who: HERO
-      text: Długa podróż daje się we znaki. Nie myślałem, że będę tak zmęczony
+      text: A long journey takes its toll. I didn't expect to be this tired.
     - who: NPC
-      text: Długa podróż? Myślałem, że jesteś tu na polowanie, nie na wczasy.
+      text: A long journey? I thought you were here to hunt, not for a vacation.
     - who: NPC
-      text: Mniejsza z tym masz już energię? Bo jeśli tak, to przydałoby się trochę chrust.
+      text: Anyway, do you have the energy now? If so, we could use some firewood.
     - who: NPC
-      text: Ognisko samo się nie podtrzyma, a Alan i Terry jeszcze nie wrócili.
+      text: The fire won’t keep itself going, and Alan and Terry still haven’t returned.
     - who: NPC
-      text: A skoro już tam będziesz w lesie... przynieś mi kilka czarnych kurek
+      text: And since you’ll be out in the forest... bring me some black chanterelles.
     - who: NPC
-      text: Kolacja będzie smaczniejsza
+      text: Dinner will taste better that way.
   - dialog: 1
     choice:
-    - text: Jasne, pójdę zaraz do lasu
+    - text: Sure, I’ll head into the forest right away.
       action:
       - next: 2
-    - text: A może najpierw coś do picia?
+    - text: Maybe something to drink first?
       action:
       - next: 3
-    - text: Gdzie najlepiej szukać?
+    - text: Where should I look?
       action:
       - next: 4
   - dialog: 2
     talk:
     - who: NPC
-      text: Idź, idź
+      text: Go on, go on.
   - dialog: 3
     talk:
     - who: NPC
-      text: Na twoje szczęście już przynieśliśmy wodę z strumienia
+      text: Lucky for you, we already fetched water from the stream.
     - who: NPC
-      text: Beczka z wodą jest obok chatki Artura
+      text: The water barrel is next to Arthur's cabin.
   - dialog: 4
     talk:
     - who: NPC
-      text: Idź w stronę starego obozu drwali, tam zawsze coś znajdziesz
+      text: Head toward the old lumberjack camp — there's always something there.

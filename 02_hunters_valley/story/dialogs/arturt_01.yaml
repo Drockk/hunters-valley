@@ -2,27 +2,27 @@ dialogs:
   - dialog: 0
     talk:
     - who: NPC
-      text: Słyszę, że Orr wysłał kolejnego młodzika na poszukiwanie czarnych kurek?
+      text: I hear Orr sent another youngster to look for black chanterelles?
     - who: HERO
-      text: Tak, powiedział, że to dobre ćwiczenie na początek.
+      text: Yes, he said it's good practice to start with.
     - who: NPC
-      text: Ha! Robi to każdemu nowemu. Chyba lubi patrzeć, jak się błąkacie po lesie.
+      text: Ha! He does that to every newcomer. I think he enjoys watching you wander through the woods.
     - who: NPC
-      text: Ale skoro już ci się trafiło to zadanie, idź na południe, w okolice starego obozu drwali.
+      text: But since you got stuck with the task, head south, toward the old lumberjack camp.
     - who: NPC
-      text: Tam rosną całe łany kurek, jeśli tylko wiesz, gdzie patrzeć.
+      text: Whole patches of chanterelles grow there — if you know where to look.
     - who: NPC
-      text: Alan i Terry też tam poszli dziś rano. Może ich dogonisz.
+      text: Alan and Terry also went there this morning. Maybe you'll catch up with them.
     - who: NPC
-      text: Tylko uważaj – las o tej porze potrafi być zdradliwy. Szczególnie, gdy jesteś sam.
+      text: Just be careful — the forest can be tricky this time of day. Especially when you're alone.
   - dialog: 1
     choice:
-    - text: Dzięki za radę, ruszam od razu
+    - text: Thanks for the tip, I’m heading out right away.
       action:
       - next: 2
   - dialog: 2
     talk:
     - who: HERO
-      text: Dzięki za radę, ruszam od razu.
+      text: Thanks for the tip, I’m heading out right away.
     - who: NPC
-      text: Powodzenia, młody. I pamiętaj – nie wszystko, co wygląda jak kurka, jest jadalne!
+      text: Good luck, kid. And remember — not everything that looks like a chanterelle is edible!

@@ -14,6 +14,7 @@ func _ready() -> void:
 	await get_tree().create_timer(0.2).timeout
 	player_spawned = true
 
+	DmNotificationSystem.send_notification("Player character is Yuv")
 	DmNotificationSystem.send_notification(hero_resource.npc_description)
 	pass
 
